@@ -1,0 +1,92 @@
+<!doctype html>
+<html lang="ca">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Una cronologia interactiva de la història de la música occidental, dels cants medievals fins a la creació contemporània.">
+  <title>Tempo — Història de la música occidental</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <header class="hero" id="inici">
+    <nav class="topbar" aria-label="Navegació principal">
+      <a class="brand" href="#inici" aria-label="Tempo, inici">
+        <span class="brand-mark" aria-hidden="true">T</span>
+        <span>TEMPO</span>
+      </a>
+      <a class="listen-link" href="#cronologia">Explora la cronologia <span aria-hidden="true">↓</span></a>
+    </nav>
+
+    <div class="hero-content">
+      <p class="eyebrow">Del segle IX fins avui</p>
+      <h1>La història<br>sona <em>viva.</em></h1>
+      <p class="hero-copy">Set etapes, segles d’innovació i les veus que van transformar la manera d’escoltar el món.</p>
+      <a class="primary-action" href="#cronologia">Comença el viatge <span aria-hidden="true">↘</span></a>
+    </div>
+
+    <div class="hero-disc" aria-hidden="true">
+      <div class="disc-label">
+        <span>900</span>
+        <span class="disc-note">♪</span>
+        <span>AVUI</span>
+      </div>
+    </div>
+
+    <div class="hero-footer" aria-hidden="true">
+      <span>MONODIA</span><span>·</span><span>POLIFONIA</span><span>·</span><span>TONALITAT</span><span>·</span><span>AVANTGUARDA</span>
+    </div>
+  </header>
+
+  <main id="cronologia">
+    <section class="intro" aria-labelledby="intro-title">
+      <div>
+        <p class="section-kicker">Una línia del temps per escoltar</p>
+        <h2 id="intro-title">Cada època va imaginar<br>un so <em>nou.</em></h2>
+      </div>
+      <div class="intro-tools">
+        <p>Tria una etapa o cerca un compositor. Amplia el context, obre els estils i descobreix per què cada creador és important.</p>
+        <label class="search-box">
+          <span class="sr-only">Cerca compositors, obres o estils</span>
+          <span aria-hidden="true">⌕</span>
+          <input id="search" type="search" placeholder="Cerca Mozart, òpera, nocturn…" autocomplete="off">
+        </label>
+      </div>
+    </section>
+
+    <nav class="era-nav" aria-label="Etapes històriques">
+      <div class="era-nav-inner" id="era-nav"></div>
+    </nav>
+
+    <div class="timeline" id="timeline" aria-live="polite"></div>
+
+    <section class="no-results" id="no-results" hidden>
+      <p>No hem trobat cap coincidència.</p>
+      <button id="clear-search" type="button">Neteja la cerca</button>
+    </section>
+
+    <section class="legend" aria-label="Com utilitzar la cronologia">
+      <div class="legend-number">07</div>
+      <div>
+        <p class="section-kicker">Continua escoltant</p>
+        <h2>La història no acaba.<br><em>Canvia de tempo.</em></h2>
+      </div>
+      <p>Clica una època per fer zoom, un estil per aprendre a reconèixer-lo o un compositor per veure’n la biografia i escoltar tres obres a Spotify.</p>
+    </section>
+  </main>
+
+  <dialog class="detail-dialog" id="detail-dialog" aria-labelledby="dialog-title">
+    <div class="dialog-shell">
+      <button class="dialog-close" id="dialog-close" type="button" aria-label="Tanca la finestra">×</button>
+      <div id="dialog-content"></div>
+    </div>
+  </dialog>
+
+  <footer>
+    <a class="brand footer-brand" href="#inici"><span class="brand-mark">T</span><span>TEMPO</span></a>
+    <p>Una introducció visual a la música occidental.</p>
+    <a href="#inici">Torna a l’inici ↑</a>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
