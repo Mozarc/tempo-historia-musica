@@ -254,6 +254,51 @@ const styleProfiles = {
   "Nova simplicitat": ["Terme aplicat a diverses reaccions contra la complexitat avantguardista, amb retorns molt diferents a claredat, consonància o expressió directa.", "Materials aparentment simples, tempos amplis i una atenció intensa a ressonància, silenci o repetició.", "Pärt · Tabula rasa"]
 };
 
+const eraSoundtracks = {
+  "edat-mitjana": {
+    uri: "spotify:track:1nKzh41fYBcA8Y1KP7aMBT",
+    title: "Hildegarda de Bingen · O vis eternitatis",
+    performers: "Sequentia · Barbara Thornton",
+    guide: "Segueix la línia vocal i observa com el mode crea direcció sense les cadències tonals modernes."
+  },
+  renaixement: {
+    uri: "spotify:track:3xqwbL3saRSn3mCHPu1H8u",
+    title: "Josquin des Prés · Ave Maria… Virgo serena",
+    performers: "Westminster Choir · Joe Miller",
+    guide: "Escolta com el mateix motiu entra successivament en cada veu i converteix la imitació en arquitectura."
+  },
+  barroc: {
+    uri: "spotify:track:36WESkAU01ubKKpdvrGbVo",
+    title: "J. S. Bach · Concert de Brandenburg núm. 3, III",
+    performers: "Akademie für Alte Musik Berlin",
+    guide: "Fixa’t en el motor rítmic, les seqüències i el relleu constant del material entre els grups de corda."
+  },
+  classicisme: {
+    uri: "spotify:track:3pqUo8fM2jRdH0TN3daOcb",
+    title: "Mozart · Simfonia núm. 41 «Júpiter», IV",
+    performers: "Berliner Philharmoniker · Riccardo Muti",
+    guide: "Identifica els motius breus i segueix com Mozart els combina fins a una culminació contrapuntística."
+  },
+  romanticisme: {
+    uri: "spotify:track:1s75RRFzLl7vdDv2KU96hZ",
+    title: "Schubert · Erlkönig, D 328",
+    performers: "Dietrich Fischer-Dieskau · Gerald Moore",
+    guide: "El piano encarna la cavalcada; escolta com una sola veu diferencia narrador, pare, fill i rei dels elfs."
+  },
+  "segle-xx": {
+    uri: "spotify:track:1BKxr9aTPg40V3p0ZAtwbz",
+    title: "Stravinski · La consagració de la primavera, Auguris",
+    performers: "The Cleveland Orchestra · Pierre Boulez",
+    guide: "Compta els accents del gran acord repetit: el pols persisteix, però l’accentuació desmunta la regularitat."
+  },
+  contemporania: {
+    uri: "spotify:track:69QmgmkKyprzkfop3XgTOr",
+    title: "Steve Reich · Music for 18 Musicians",
+    performers: "Steve Reich Ensemble",
+    guide: "Escolta la pulsació comuna i els canvis de respiració que transformen gradualment harmonia, densitat i color."
+  }
+};
+
 const timeline = document.querySelector("#timeline");
 const eraNav = document.querySelector("#era-nav");
 const search = document.querySelector("#search");
@@ -262,9 +307,108 @@ const clearSearch = document.querySelector("#clear-search");
 const detailDialog = document.querySelector("#detail-dialog");
 const dialogContent = document.querySelector("#dialog-content");
 const dialogClose = document.querySelector("#dialog-close");
+const soundtrack = document.querySelector("#soundtrack");
+const soundtrackEra = document.querySelector("#soundtrack-era");
+const soundtrackTitle = document.querySelector("#soundtrack-title");
+const soundtrackPerformers = document.querySelector("#soundtrack-performers");
+const soundtrackGuide = document.querySelector("#soundtrack-guide");
+const soundtrackEmbed = document.querySelector("#spotify-embed");
+const soundtrackEmbedShell = document.querySelector("#spotify-embed-shell");
+const soundtrackActivate = document.querySelector("#soundtrack-activate");
+const soundtrackToggle = document.querySelector("#soundtrack-toggle");
+const soundtrackOpen = document.querySelector("#soundtrack-open");
+const soundtrackStatus = document.querySelector("#soundtrack-status");
+const atlasParts = document.querySelector("#atlas-parts");
+let historyCatalog;
 
 const spotifyUrl = (composer, work) => `https://open.spotify.com/search/${encodeURIComponent(`${composer} ${work}`)}`;
+const spotifyItemUrl = uri => {
+  const [, type, id] = uri.split(":");
+  return `https://open.spotify.com/${type}/${id}`;
+};
 const normalize = value => value.normalize("NFD").replace(/[\u0300-\u036f]/g, "").toLowerCase();
+const escapeHtml = value => String(value)
+  .replaceAll("&", "&amp;")
+  .replaceAll("<", "&lt;")
+  .replaceAll(">", "&gt;")
+  .replaceAll('"', "&quot;")
+  .replaceAll("'", "&#039;");
+const historyCollections = ["parts", "chapters", "sections", "people", "works", "concepts", "sources"];
+const mergeHistoryCatalogs = catalogs => Object.fromEntries([
+  ["schemaVersion", 1],
+  ["metadata", catalogs.at(-1)?.metadata || catalogs[0]?.metadata || {}],
+  ...historyCollections.map(collection => {
+    const byId = new Map();
+    catalogs.forEach(catalog => (catalog[collection] || []).forEach(item => {
+      if (!byId.has(item.id)) byId.set(item.id, item);
+    }));
+    return [collection, [...byId.values()]];
+  }),
+]);
+
+async function renderHistoryAtlas() {
+  if (!atlasParts) return;
+
+  try {
+    const [coverageResponse, manifestResponse] = await Promise.all([
+      fetch("data/coverage.json"),
+      fetch("data/catalog-manifest.json"),
+    ]);
+    if (!coverageResponse.ok) throw new Error(`Cobertura: HTTP ${coverageResponse.status}`);
+    if (!manifestResponse.ok) throw new Error(`Manifest: HTTP ${manifestResponse.status}`);
+    const [coverage, manifest] = await Promise.all([
+      coverageResponse.json(),
+      manifestResponse.json(),
+    ]);
+    const catalogResponses = await Promise.all(
+      manifest.files.map(file => fetch(`data/${file}`))
+    );
+    const failedCatalog = catalogResponses.find(response => !response.ok);
+    if (failedCatalog) throw new Error(`Catàleg: HTTP ${failedCatalog.status}`);
+    const catalog = mergeHistoryCatalogs(
+      await Promise.all(catalogResponses.map(response => response.json()))
+    );
+    historyCatalog = catalog;
+    const parts = coverage.entries.filter(entry => entry.level === "part");
+    const developedChapterIds = new Set(catalog.chapters.map(chapter => chapter.id));
+
+    atlasParts.innerHTML = parts.map((part, partIndex) => {
+      const chapters = coverage.entries.filter(entry =>
+        entry.level === "chapter" && entry.parentId === part.id
+      );
+      return `
+        <details class="atlas-part"${partIndex === 0 ? " open" : ""}>
+          <summary>
+            <span class="atlas-part-index">${String(partIndex + 1).padStart(2, "0")}</span>
+            <span class="atlas-part-title">${escapeHtml(part.title)}</span>
+            <span class="atlas-part-meta">${escapeHtml(part.pages)} · ${chapters.length} capítols</span>
+          </summary>
+          <ol class="atlas-chapters">
+            ${chapters.map((chapter, chapterIndex) => `
+              <li>
+                <span class="atlas-chapter-index">${String(chapterIndex + 1).padStart(2, "0")}</span>
+                <span class="atlas-chapter-copy">
+                  <strong>${escapeHtml(chapter.title)}</strong>
+                  <small>${chapter.topics.length} fils · pàg. ${escapeHtml(chapter.pages)}</small>
+                </span>
+                ${developedChapterIds.has(chapter.id) ? `
+                  <button class="atlas-read" type="button" data-history-chapter="${chapter.id}">
+                    Llegeix i escolta <span aria-hidden="true">↗</span>
+                  </button>
+                ` : `<span class="atlas-pending">Indexat</span>`}
+              </li>
+            `).join("")}
+          </ol>
+        </details>
+      `;
+    }).join("");
+  } catch (error) {
+    atlasParts.innerHTML = `
+      <p class="atlas-loading">El mapa editorial no s’ha pogut carregar. La cronologia principal continua disponible.</p>
+    `;
+    console.error("No s'ha pogut carregar el mapa editorial:", error);
+  }
+}
 
 function renderNav() {
   eraNav.innerHTML = eras.map((era, index) => `
@@ -444,6 +588,238 @@ function openComposerProfile(name, eraId) {
   `);
 }
 
+function openHistoryChapter(chapterId) {
+  const chapter = historyCatalog?.chapters.find(item => item.id === chapterId);
+  if (!chapter) return;
+  const part = historyCatalog.parts.find(item => item.id === chapter.partId);
+  const sections = chapter.sectionIds
+    .map(id => historyCatalog.sections.find(item => item.id === id))
+    .filter(Boolean);
+  const people = chapter.personIds
+    .map(id => historyCatalog.people.find(item => item.id === id))
+    .filter(Boolean);
+  const works = chapter.workIds
+    .map(id => historyCatalog.works.find(item => item.id === id))
+    .filter(Boolean);
+  const concepts = chapter.conceptIds
+    .map(id => historyCatalog.concepts.find(item => item.id === id))
+    .filter(Boolean);
+
+  openDialog(`
+    <header class="detail-hero history-detail-hero" style="--detail-color:#3548e8" data-ghost="${String(chapter.order).padStart(2, "0")}">
+      <p class="detail-type">${escapeHtml(part.title)} · Capítol ${String(chapter.order).padStart(2, "0")} · ${escapeHtml(chapter.dates || "")}</p>
+      <h2 id="dialog-title">${escapeHtml(chapter.title)}</h2>
+      <p class="detail-deck">${escapeHtml(chapter.subtitle || "")}</p>
+    </header>
+    <div class="detail-body history-detail" style="--detail-color:#3548e8">
+      <section class="chapter-thesis">
+        <p class="detail-label">Tesi del capítol</p>
+        <p>${escapeHtml(chapter.synopsis)}</p>
+      </section>
+
+      <section class="chapter-sections" aria-labelledby="chapter-sections-title">
+        <p class="detail-label">Relat històric</p>
+        <h3 id="chapter-sections-title">Tres perspectives connectades</h3>
+        <div class="chapter-section-grid">
+          ${sections.map((section, index) => `
+            <article class="chapter-section-card">
+              <span>${String(index + 1).padStart(2, "0")}</span>
+              <h4>${escapeHtml(section.title)}</h4>
+              <p>${escapeHtml(section.argument)}</p>
+              ${section.context ? `<dl><dt>Context</dt><dd>${escapeHtml(section.context)}</dd></dl>` : ""}
+              ${section.musicalLanguage ? `<dl><dt>Llenguatge</dt><dd>${escapeHtml(section.musicalLanguage)}</dd></dl>` : ""}
+              ${section.institutions ? `<dl><dt>Institucions</dt><dd>${escapeHtml(section.institutions)}</dd></dl>` : ""}
+              ${section.practices ? `<dl><dt>Pràctiques</dt><dd>${escapeHtml(section.practices)}</dd></dl>` : ""}
+              ${section.reception ? `<dl><dt>Recepció</dt><dd>${escapeHtml(section.reception)}</dd></dl>` : ""}
+            </article>
+          `).join("")}
+        </div>
+      </section>
+
+      ${people.length ? `
+        <section class="chapter-people">
+          <p class="detail-label">Figures i institucions</p>
+          <h3>Veus situades en el seu món</h3>
+          <div class="chapter-people-grid">
+            ${people.map(person => `
+              <article>
+                <p class="chapter-person-meta">${escapeHtml(person.dates)} · ${escapeHtml(person.roles.join(" · "))}</p>
+                <h4>${escapeHtml(person.name)}</h4>
+                <p>${escapeHtml(person.biography)}</p>
+                <strong>Aportació</strong>
+                <p>${escapeHtml(person.contribution)}</p>
+                ${person.reception ? `<p class="chapter-caution">${escapeHtml(person.reception)}</p>` : ""}
+              </article>
+            `).join("")}
+          </div>
+        </section>
+      ` : ""}
+
+      ${works.length ? `
+        <section class="chapter-listening">
+          <p class="detail-label">Escoltes guiades</p>
+          <h3>Del document al so</h3>
+          <div class="chapter-work-list">
+            ${works.map((work, index) => {
+              const recording = work.recordings[0];
+              return `
+                <article class="chapter-work">
+                  <div class="chapter-work-heading">
+                    <span>${String(index + 1).padStart(2, "0")}</span>
+                    <div>
+                      <h4>${escapeHtml(work.title)}</h4>
+                      <p>${escapeHtml(work.date || "")} · ${escapeHtml(work.genre)} · ${escapeHtml(work.attribution || work.forces || "")}</p>
+                    </div>
+                    ${recording ? `<a href="${recording.spotifyUrl}" target="_blank" rel="noopener noreferrer">Spotify ↗</a>` : ""}
+                  </div>
+                  <p class="chapter-work-analysis">${escapeHtml(work.analysis)}</p>
+                  <div class="listening-cues">
+                    ${work.listeningGuide.map(cue => `
+                      <div>
+                        <strong>${escapeHtml(cue.label)}${Number.isInteger(cue.start) ? ` · ${Math.floor(cue.start / 60)}:${String(cue.start % 60).padStart(2, "0")}` : ""}</strong>
+                        <p>${escapeHtml(cue.instruction)}</p>
+                      </div>
+                    `).join("")}
+                  </div>
+                  ${recording ? `
+                    <p class="recording-credit">${escapeHtml(recording.performers.join(" · "))}${recording.year ? ` · ${recording.year}` : ""}. ${escapeHtml(recording.pedagogicalNote || "")}</p>
+                  ` : ""}
+                </article>
+              `;
+            }).join("")}
+          </div>
+        </section>
+      ` : ""}
+
+      <section class="chapter-concepts">
+        <p class="detail-label">Conceptes per escoltar</p>
+        <div class="concept-cards">
+          ${concepts.map(concept => `
+            <article>
+              <h4>${escapeHtml(concept.term)}</h4>
+              <p>${escapeHtml(concept.definition)}</p>
+              <ul>${concept.audibleTraits.map(trait => `<li>${escapeHtml(trait)}</li>`).join("")}</ul>
+            </article>
+          `).join("")}
+        </div>
+      </section>
+      <p class="chapter-source-note">Fonts de base: Burkholder, Grout i Palisca, pàg. ${escapeHtml(chapter.sourceRefs[0]?.pages || "")}; manual del CPM Francisco Guerrero, pàg. ${escapeHtml(chapter.sourceRefs[1]?.pages || "")}. Les reconstruccions discogràfiques són propostes interpretatives modernes.</p>
+    </div>
+  `);
+}
+
+let currentSoundtrackEra = "edat-mitjana";
+let spotifyController;
+let spotifyApiPromise;
+let soundtrackEnabled = false;
+let soundtrackPlaying = false;
+
+soundtrack.dataset.era = currentSoundtrackEra;
+soundtrack.style.setProperty(
+  "--soundtrack-color",
+  eras.find(item => item.id === currentSoundtrackEra).color
+);
+
+function announceSoundtrack(message) {
+  soundtrackStatus.textContent = message;
+}
+
+function updateSoundtrackButton() {
+  soundtrackToggle.textContent = soundtrackPlaying ? "Pausa" : "Reprèn";
+  soundtrackToggle.setAttribute("aria-pressed", String(soundtrackPlaying));
+}
+
+function setSoundtrack(eraId) {
+  const selection = eraSoundtracks[eraId];
+  const era = eras.find(item => item.id === eraId);
+  if (!selection || !era || currentSoundtrackEra === eraId) return;
+
+  currentSoundtrackEra = eraId;
+  soundtrack.dataset.era = eraId;
+  soundtrack.style.setProperty("--soundtrack-color", era.color);
+  soundtrackEra.textContent = era.name;
+  soundtrackTitle.textContent = selection.title;
+  soundtrackPerformers.textContent = selection.performers;
+  soundtrackGuide.textContent = selection.guide;
+  soundtrackOpen.href = spotifyItemUrl(selection.uri);
+  soundtrackOpen.setAttribute("aria-label", `Obre ${selection.title} a Spotify`);
+
+  if (spotifyController && soundtrackEnabled) {
+    spotifyController.loadUri(selection.uri);
+    if (soundtrackPlaying) spotifyController.play();
+    announceSoundtrack(`Ara sona ${selection.title}.`);
+  } else {
+    announceSoundtrack(`Escolta preparada: ${selection.title}.`);
+  }
+}
+
+function loadSpotifyApi() {
+  if (spotifyApiPromise) return spotifyApiPromise;
+
+  spotifyApiPromise = new Promise((resolve, reject) => {
+    window.onSpotifyIframeApiReady = resolve;
+    const script = document.createElement("script");
+    script.src = "https://open.spotify.com/embed/iframe-api/v1";
+    script.async = true;
+    script.addEventListener("error", () => reject(new Error("Spotify no està disponible.")));
+    document.head.append(script);
+  });
+
+  return spotifyApiPromise;
+}
+
+async function activateSoundtrack() {
+  soundtrackActivate.disabled = true;
+  soundtrackActivate.textContent = "Preparant l’escolta…";
+
+  try {
+    const IFrameAPI = await loadSpotifyApi();
+    const selection = eraSoundtracks[currentSoundtrackEra];
+    soundtrackEmbedShell.hidden = false;
+
+    spotifyController = await new Promise(resolve => {
+      IFrameAPI.createController(
+        soundtrackEmbed,
+        { width: "100%", height: 80, uri: selection.uri },
+        resolve
+      );
+    });
+
+    spotifyController.addListener("playback_update", event => {
+      soundtrackPlaying = !event.data.isPaused;
+      updateSoundtrackButton();
+    });
+
+    soundtrackEnabled = true;
+    soundtrackPlaying = true;
+    soundtrack.classList.add("is-active");
+    soundtrackActivate.hidden = true;
+    soundtrackToggle.hidden = false;
+    updateSoundtrackButton();
+    spotifyController.play();
+    announceSoundtrack(`Experiència sonora activada. Ara sona ${selection.title}.`);
+  } catch (error) {
+    soundtrackEmbedShell.hidden = true;
+    soundtrackActivate.disabled = false;
+    soundtrackActivate.textContent = "Torna-ho a provar";
+    announceSoundtrack("No s’ha pogut carregar Spotify. Pots continuar llegint sense àudio.");
+  }
+}
+
+function toggleSoundtrack() {
+  if (!spotifyController) return;
+  if (soundtrackPlaying) {
+    spotifyController.pause();
+    soundtrackPlaying = false;
+    announceSoundtrack("Música en pausa.");
+  } else {
+    spotifyController.play();
+    soundtrackPlaying = true;
+    announceSoundtrack(`Es reprèn ${eraSoundtracks[currentSoundtrackEra].title}.`);
+  }
+  updateSoundtrackButton();
+}
+
 let sectionObserver;
 function setupSectionObserver() {
   if (sectionObserver) sectionObserver.disconnect();
@@ -453,6 +829,7 @@ function setupSectionObserver() {
       .filter(entry => entry.isIntersecting)
       .sort((a, b) => b.intersectionRatio - a.intersectionRatio)[0];
     if (!visible) return;
+    setSoundtrack(visible.target.id);
     document.querySelectorAll(".era-link").forEach(link => {
       link.classList.toggle("active", link.dataset.era === visible.target.id);
     });
@@ -475,12 +852,19 @@ timeline.addEventListener("click", event => {
   if (styleButton) openStyleProfile(styleButton.dataset.style, styleButton.dataset.era);
   if (composerButton) openComposerProfile(composerButton.dataset.composer, composerButton.dataset.era);
 });
+atlasParts?.addEventListener("click", event => {
+  const chapterButton = event.target.closest("[data-history-chapter]");
+  if (chapterButton) openHistoryChapter(chapterButton.dataset.historyChapter);
+});
 
 dialogClose.addEventListener("click", closeDialog);
 detailDialog.addEventListener("click", event => {
   if (event.target === detailDialog) closeDialog();
 });
 detailDialog.addEventListener("close", () => document.body.classList.remove("dialog-open"));
+soundtrackActivate.addEventListener("click", activateSoundtrack);
+soundtrackToggle.addEventListener("click", toggleSoundtrack);
 
 renderNav();
 renderTimeline();
+renderHistoryAtlas();

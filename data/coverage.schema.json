@@ -1,0 +1,135 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://mozarc.github.io/tempo-historia-musica/data/coverage.schema.json",
+  "title": "Tempo — Cobertura de l'índex",
+  "type": "object",
+  "additionalProperties": false,
+  "required": ["schemaVersion", "sourceId", "lastReviewed", "entries"],
+  "properties": {
+    "schemaVersion": {
+      "const": 1
+    },
+    "sourceId": {
+      "$ref": "#/$defs/id"
+    },
+    "lastReviewed": {
+      "type": "string",
+      "format": "date"
+    },
+    "entries": {
+      "type": "array",
+      "items": {
+        "$ref": "#/$defs/entry"
+      }
+    }
+  },
+  "$defs": {
+    "id": {
+      "type": "string",
+      "pattern": "^[a-z0-9]+(?:-[a-z0-9]+)*$"
+    },
+    "entry": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "id",
+        "order",
+        "level",
+        "title",
+        "status",
+        "catalogIds"
+      ],
+      "properties": {
+        "id": {
+          "$ref": "#/$defs/id"
+        },
+        "parentId": {
+          "$ref": "#/$defs/id"
+        },
+        "order": {
+          "type": "integer",
+          "minimum": 1
+        },
+        "level": {
+          "enum": ["part", "chapter", "section", "subsection"]
+        },
+        "title": {
+          "type": "string",
+          "minLength": 1
+        },
+        "pages": {
+          "type": "string",
+          "description": "Pàgina o interval tal com apareix a l'edició de referència."
+        },
+        "topics": {
+          "type": "array",
+          "items": {
+            "$ref": "#/$defs/topic"
+          }
+        },
+        "status": {
+          "enum": [
+            "indexed",
+            "sourced",
+            "drafted",
+            "reviewed",
+            "published"
+          ]
+        },
+        "catalogIds": {
+          "type": "array",
+          "items": {
+            "$ref": "#/$defs/id"
+          },
+          "uniqueItems": true
+        },
+        "missing": {
+          "type": "array",
+          "items": {
+            "enum": [
+              "context",
+              "musical-language",
+              "people",
+              "works",
+              "concepts",
+              "sources",
+              "guided-listening",
+              "recordings",
+              "editorial-review",
+              "publication"
+            ]
+          },
+          "uniqueItems": true
+        },
+        "notes": {
+          "type": "string"
+        }
+      }
+    },
+    "topic": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["title"],
+      "properties": {
+        "title": {
+          "type": "string",
+          "minLength": 1
+        },
+        "page": {
+          "type": "integer",
+          "minimum": 1
+        },
+        "kind": {
+          "enum": [
+            "section",
+            "chronology",
+            "context",
+            "innovation",
+            "interpretation",
+            "reception"
+          ]
+        }
+      }
+    }
+  }
+}

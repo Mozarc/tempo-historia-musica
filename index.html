@@ -5,7 +5,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta name="description" content="Una cronologia interactiva de la història de la música occidental, dels cants medievals fins a la creació contemporània.">
   <title>Tempo — Història de la música occidental</title>
-  <link rel="stylesheet" href="styles.css">
+  <link rel="stylesheet" href="styles.css?v=20260719-2">
 </head>
 <body>
   <header class="hero" id="inici">
@@ -73,9 +73,30 @@
       <p>Clica una època per fer zoom, un estil per aprendre a reconèixer-lo o un compositor per veure’n la biografia i escoltar tres obres a Spotify.</p>
     </section>
 
+    <section class="history-atlas" id="atles" aria-labelledby="atlas-title">
+      <header class="atlas-header">
+        <div class="atlas-number" aria-hidden="true">08</div>
+        <div>
+          <p class="section-kicker">Nou mapa editorial · En desenvolupament</p>
+          <h2 id="atlas-title">Sis mons.<br><em>Trenta-nou capítols.</em></h2>
+        </div>
+        <p>No només compositors: institucions, pràctiques, tecnologies, públics, llenguatges i maneres d’interpretar. Aquest índex guiarà l’ampliació profunda de Tempo.</p>
+      </header>
+      <div class="atlas-summary" aria-label="Abast del nou mapa">
+        <span><strong>6</strong> parts</span>
+        <span><strong>39</strong> capítols</span>
+        <span><strong>286</strong> fils d’estudi</span>
+        <span><strong>Antiguitat–avui</strong> abast</span>
+      </div>
+      <div class="atlas-parts" id="atlas-parts" aria-live="polite">
+        <p class="atlas-loading">Preparant el mapa complet de continguts…</p>
+      </div>
+      <p class="atlas-note">Les pàgines corresponen a l’edició de referència de Burkholder, Grout i Palisca. Cada capítol s’anirà publicant després de la revisió de fonts i d’incorporar una escolta guiada.</p>
+    </section>
+
     <section class="zodiac-suite" id="zodiac" aria-labelledby="zodiac-title">
       <header class="zodiac-header">
-        <div class="zodiac-number" aria-hidden="true">08</div>
+        <div class="zodiac-number" aria-hidden="true">09</div>
         <div>
           <p class="section-kicker">Creació contemporània · Zodíac musical</p>
           <h2 id="zodiac-title">Dotze energies.<br><em>Una constel·lació sonora.</em></h2>
@@ -415,6 +436,31 @@
     </section>
   </main>
 
+  <aside class="soundtrack" id="soundtrack" aria-label="Experiència sonora de la cronologia">
+    <div class="soundtrack-copy">
+      <p class="soundtrack-kicker"><span aria-hidden="true">●</span> Escolta contextual</p>
+      <p class="soundtrack-era" id="soundtrack-era">Edat mitjana</p>
+      <p class="soundtrack-title" id="soundtrack-title">Hildegarda de Bingen · O vis eternitatis</p>
+      <p class="soundtrack-performers" id="soundtrack-performers">Sequentia · Barbara Thornton</p>
+    </div>
+    <p class="soundtrack-guide" id="soundtrack-guide">Segueix la línia vocal i observa com el mode crea direcció sense les cadències tonals modernes.</p>
+    <div class="soundtrack-embed" id="spotify-embed-shell" hidden>
+      <div id="spotify-embed"></div>
+    </div>
+    <div class="soundtrack-actions">
+      <a class="soundtrack-open" id="soundtrack-open" href="https://open.spotify.com/track/1nKzh41fYBcA8Y1KP7aMBT" target="_blank" rel="noopener noreferrer">
+        Spotify ↗
+      </a>
+      <button class="soundtrack-activate" id="soundtrack-activate" type="button">
+        Activa l’experiència sonora
+      </button>
+      <button class="soundtrack-toggle" id="soundtrack-toggle" type="button" hidden aria-pressed="false">
+        Pausa
+      </button>
+    </div>
+    <p class="soundtrack-status sr-only" id="soundtrack-status" aria-live="polite"></p>
+  </aside>
+
   <dialog class="detail-dialog" id="detail-dialog" aria-labelledby="dialog-title">
     <div class="dialog-shell">
       <button class="dialog-close" id="dialog-close" type="button" aria-label="Tanca la finestra">×</button>
@@ -428,6 +474,6 @@
     <a href="#inici">Torna a l’inici ↑</a>
   </footer>
 
-  <script src="script.js"></script>
+  <script src="script.js?v=20260719-2"></script>
 </body>
 </html>

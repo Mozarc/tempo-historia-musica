@@ -1,0 +1,1034 @@
+{
+  "$schema": "./content.schema.json",
+  "schemaVersion": 1,
+  "metadata": {
+    "title": "Tempo — Catàleg historiogràfic",
+    "language": "ca",
+    "lastReviewed": "2026-07-19",
+    "editorialNote": "Primera entrega profunda: món antic i medieval. L'estructura segueix l'índex de Burkholder, Grout i Palisca; el manual del CPM Francisco Guerrero serveix de contrast pedagògic. Les reconstruccions sonores de repertoris antics s'identifiquen com a interpretacions modernes, no com a documents sonors del passat."
+  },
+  "parts": [
+    {
+      "id": "part-ancient-medieval",
+      "order": 1,
+      "title": "Els mons antic i medieval",
+      "subtitle": "De l'empremta arqueològica a la polifonia escrita",
+      "dates": "c. 3000 aC–c. 1400",
+      "thesis": "La història musical anterior a 1400 no és un preludi rudimentari de la tonalitat moderna, sinó un mosaic de pràctiques rituals, cortesanes, urbanes i pedagògiques. La possibilitat de conèixer-les depèn dels rastres que han sobreviscut: instruments, imatges, textos, tractats i notacions. Entre el món antic i la baixa edat mitjana canvien profundament les institucions, els sistemes d'escriptura, la relació entre paraula i so i la idea mateixa d'autoria.",
+      "chapterIds": [
+        "chapter-01-antiquity",
+        "chapter-02-early-church",
+        "chapter-03-roman-liturgy",
+        "chapter-04-medieval-song-dance",
+        "chapter-05-thirteenth-century-polyphony",
+        "chapter-06-fourteenth-century-france-italy"
+      ],
+      "sourceRefs": [
+        {"sourceId": "burkholder-grout-palisca-2019", "pages": "23–192"},
+        {"sourceId": "cpm-francisco-guerrero-2014", "pages": "15–58"}
+      ]
+    }
+  ],
+  "chapters": [
+    {
+      "id": "chapter-01-antiquity",
+      "partId": "part-ancient-medieval",
+      "order": 1,
+      "title": "La música a l'Antiguitat",
+      "subtitle": "Rastre, pensament i reconstrucció",
+      "dates": "c. 3000 aC–segle V",
+      "synopsis": "Coneixem la música antiga de manera fragmentària: l'arqueologia conserva instruments i espais; la iconografia mostra gestos i conjunts; la literatura descriu usos i idees; la notació permet reconstruir només una part ínfima del que va sonar. Mesopotàmia aporta testimonis molt antics d'escriptura musical, mentre que Grècia llegà un cos especialment influent de teoria i filosofia. Cal distingir sempre la continuïtat de les idees gregues de la continuïtat efectiva de les seves pràctiques sonores.",
+      "sectionIds": ["section-ancient-evidence", "section-greek-system", "section-music-thought"],
+      "personIds": ["pythagoras", "plato"],
+      "workIds": ["seikilos-epitaph"],
+      "conceptIds": ["historical-evidence", "monody", "ethos", "tetrachord"],
+      "sourceRefs": [
+        {"sourceId": "burkholder-grout-palisca-2019", "pages": "23–44"},
+        {"sourceId": "cpm-francisco-guerrero-2014", "pages": "15–22"}
+      ]
+    },
+    {
+      "id": "chapter-02-early-church",
+      "partId": "part-ancient-medieval",
+      "order": 2,
+      "title": "L'Església cristiana en el primer mil·lenni",
+      "subtitle": "Ritu, memòria i unificació",
+      "dates": "segles I–X",
+      "synopsis": "El cant cristià nasqué dins una xarxa de comunitats amb herències jueves, llengües i ritus diversos. Abans de la uniformització romana coexistiren repertoris locals —romà antic, ambrosià, mossàrab, gal·licà i altres— transmesos principalment de memòria. La consolidació del cant que anomenem gregorià fou un procés polític, litúrgic i pedagògic de llarga durada, no la creació sobtada d'un únic autor. L'escriptura neumàtica va ajudar a estabilitzar repertoris que continuaven depenent de l'aprenentatge oral.",
+      "sectionIds": ["section-christian-roots", "section-chant-dialects", "section-memory-writing"],
+      "personIds": ["boethius", "gregory-the-great"],
+      "workIds": [],
+      "conceptIds": ["chant-dialect", "oral-transmission", "neume"],
+      "sourceRefs": [
+        {"sourceId": "burkholder-grout-palisca-2019", "pages": "45–74"},
+        {"sourceId": "cpm-francisco-guerrero-2014", "pages": "23–27"}
+      ]
+    },
+    {
+      "id": "chapter-03-roman-liturgy",
+      "partId": "part-ancient-medieval",
+      "order": 3,
+      "title": "La litúrgia romana i el cant pla",
+      "subtitle": "Organitzar l'any, el ritu i la memòria",
+      "dates": "segles VIII–XII",
+      "synopsis": "El cant pla adquireix sentit dins la litúrgia: la missa i l'ofici ordenen textos, funcions, dies i comunitats. Antífones, responsoris, salmòdia i cants de l'ordinari o del propi no són peces intercanviables, sinó formes associades a moments rituals concrets. Modes, fórmules melòdiques i notació faciliten la classificació i la transmissió. Trops, seqüències i drames litúrgics mostren que la tradició no era immòbil; Hildegarda de Bingen n'expandeix l'abast poètic i melòdic des d'una comunitat femenina.",
+      "sectionIds": ["section-mass-office", "section-mode-notation", "section-chant-expansions"],
+      "personIds": ["guido-arezzo", "hildegard-bingen"],
+      "workIds": ["puer-natus-est", "ut-queant-laxis", "o-vis-aeternitatis"],
+      "conceptIds": ["mode", "neume", "trope", "sequence"],
+      "sourceRefs": [
+        {"sourceId": "burkholder-grout-palisca-2019", "pages": "75–100"},
+        {"sourceId": "cpm-francisco-guerrero-2014", "pages": "27–34"}
+      ]
+    },
+    {
+      "id": "chapter-04-medieval-song-dance",
+      "partId": "part-ancient-medieval",
+      "order": 4,
+      "title": "La cançó i la música de dansa a l'edat mitjana",
+      "subtitle": "Corts, ciutats, peregrinacions i cossos",
+      "dates": "c. 1050–c. 1400",
+      "synopsis": "Fora del marc litúrgic, la monodia medieval circulà per corts, places, rutes de peregrinació i territoris lingüístics molt diferents. Trobadors i trouvères elaboraren codis poètics de desig, servei i prestigi, mentre que les Cantigas de Santa Maria vincularen devoció, relat miraculós i projecte cortesà. La notació conserva sobretot l'esquelet melòdic: instrumentació, tempo i ornamentació exigeixen decisions interpretatives. Les danses instrumentals recorden que gran part de la vida musical medieval no quedà fixada per escrit.",
+      "sectionIds": ["section-andalusian-song", "section-troubadour-courts", "section-iberian-song-dance"],
+      "personIds": ["bernart-ventadorn", "alfonso-x"],
+      "workIds": ["can-vei-lauzeta", "santa-maria-strela", "lamento-tristano"],
+      "conceptIds": ["courtly-love", "virelai", "estampie"],
+      "sourceRefs": [
+        {"sourceId": "burkholder-grout-palisca-2019", "pages": "101–120"},
+        {"sourceId": "cpm-francisco-guerrero-2014", "pages": "35–48"}
+      ]
+    },
+    {
+      "id": "chapter-05-thirteenth-century-polyphony",
+      "partId": "part-ancient-medieval",
+      "order": 5,
+      "title": "La polifonia al llarg del segle XIII",
+      "subtitle": "Mesurar el temps i construir l'espai sonor",
+      "dates": "c. 900–c. 1300",
+      "synopsis": "La polifonia escrita sorgeix com una manera d'amplificar i recrear el cant, no de substituir-lo. De l'organum paral·lel a les textures florides aquitanes i a les grans elaboracions de Notre-Dame, la coordinació de veus obliga a imaginar noves formes de mesurar i notar el temps. Els modes rítmics fan possible una arquitectura sonora de gran escala; el motet reutilitza fragments litúrgics i hi superposa textos nous, fins i tot en llengües diferents. La catedral és alhora espai ritual, institució educativa i símbol urbà.",
+      "sectionIds": ["section-early-organum", "section-notre-dame", "section-motet-thirteenth"],
+      "personIds": ["leonin", "perotin"],
+      "workIds": ["viderunt-omnes"],
+      "conceptIds": ["organum", "rhythmic-modes", "motet"],
+      "sourceRefs": [
+        {"sourceId": "burkholder-grout-palisca-2019", "pages": "121–156"},
+        {"sourceId": "cpm-francisco-guerrero-2014", "pages": "49–54"}
+      ]
+    },
+    {
+      "id": "chapter-06-fourteenth-century-france-italy",
+      "partId": "part-ancient-medieval",
+      "order": 6,
+      "title": "La música francesa i italiana al segle XIV",
+      "subtitle": "Ars Nova, formes fixes i subtilesa",
+      "dates": "c. 1300–c. 1400",
+      "synopsis": "Al segle XIV, una notació rítmica més flexible amplia les possibilitats de coordinació, síncope i proporció. A França, l'Ars Nova i la isorítmia donen al motet una estructura de llarg abast; Guillaume de Machaut integra poesia, cançó i polifonia sacra dins un llegat excepcionalment ben conservat. A Itàlia, madrigal, caccia i ballata configuren el Trecento, amb Francesco Landini com a figura central. L'Ars Subtilior porta l'escriptura i la interpretació cortesanes a una complexitat deliberadament exclusiva.",
+      "sectionIds": ["section-ars-nova", "section-machaut-forms", "section-trecento-subtilior"],
+      "personIds": ["philippe-vitry", "guillaume-machaut", "francesco-landini"],
+      "workIds": ["machaut-kyrie", "douce-dame-jolie", "ecco-la-primavera"],
+      "conceptIds": ["isorhythm", "formes-fixes", "ars-subtilior"],
+      "sourceRefs": [
+        {"sourceId": "burkholder-grout-palisca-2019", "pages": "157–192"},
+        {"sourceId": "cpm-francisco-guerrero-2014", "pages": "54–58"}
+      ]
+    }
+  ],
+  "sections": [
+    {
+      "id": "section-ancient-evidence",
+      "chapterId": "chapter-01-antiquity",
+      "order": 1,
+      "title": "Com sabem què sonava?",
+      "argument": "No hi ha una única font que restitueixi la música antiga. Instruments excavats, escenes pintades, descripcions literàries, tractats i fragments de notació aporten dades diferents i sovint incompletes. Una interpretació actual combina evidències i hipòtesis; per això cal separar allò documentat —un interval, un text, una forma d'instrument— de les decisions modernes sobre timbre, tempo o acompanyament.",
+      "context": "Les societats de Mesopotàmia, Egipte, Palestina, Grècia i Roma atribuïren a la música funcions rituals, educatives, teatrals, militars i cortesanes.",
+      "practices": "La transmissió oral dominà fins i tot en cultures amb escriptura; la notació conservada representa una fracció mínima de les pràctiques.",
+      "sourceRefs": [{"sourceId": "cpm-francisco-guerrero-2014", "pages": "15–17"}]
+    },
+    {
+      "id": "section-greek-system",
+      "chapterId": "chapter-01-antiquity",
+      "order": 2,
+      "title": "Melodia, ritme i tetracords",
+      "argument": "La teoria grega descriu una música essencialment monòdica i concentra l'anàlisi en intervals, gèneres de tetracord i organització melòdica. Diatònic, cromàtic i enharmònic no designen encara el mateix que en la teoria tonal moderna. Els instruments podien doblar o variar la línia vocal, cosa que obre la possibilitat d'una heterofonia que la notació no fixa amb detall.",
+      "musicalLanguage": "Octava, quinta i quarta s'expliquen mitjançant proporcions simples; els tetracords articulen successions de quatre sons dins sistemes més amplis.",
+      "sourceRefs": [{"sourceId": "cpm-francisco-guerrero-2014", "pages": "17–20"}]
+    },
+    {
+      "id": "section-music-thought",
+      "chapterId": "chapter-01-antiquity",
+      "order": 3,
+      "title": "Ethos i harmonia del cosmos",
+      "argument": "El llegat grec més persistent no és un repertori continu, sinó una manera d'interrogar la música. La teoria de l'ethos associa estructures sonores amb disposicions del caràcter i efectes educatius; la idea d'una harmonia del cosmos relaciona proporció musical, nombre i ordre universal. Ambdues reapareixen transformades en el pensament medieval i modern.",
+      "reception": "La cultura europea reutilitzà categories gregues a través d'autors tardans i medievals, sovint allunyant-les de les pràctiques que les havien originat.",
+      "sourceRefs": [{"sourceId": "cpm-francisco-guerrero-2014", "pages": "20–22"}]
+    },
+    {
+      "id": "section-christian-roots",
+      "chapterId": "chapter-02-early-church",
+      "order": 1,
+      "title": "Herències jueves i comunitats cristianes",
+      "argument": "Les primeres comunitats cristianes heretaren pràctiques de proclamació, salmòdia i cant de tradicions jueves, però les adaptaren a llengües, espais i ritus nous. No podem reconstruir una línia simple i intacta entre sinagoga i litúrgia cristiana: les comunitats canviaren durant segles i la documentació musical directa és tardana.",
+      "institutions": "Esglésies locals, monestirs i seus episcopals van establir calendaris i repertoris propis abans de la uniformització.",
+      "sourceRefs": [
+        {"sourceId": "burkholder-grout-palisca-2019", "pages": "45–51"},
+        {"sourceId": "cpm-francisco-guerrero-2014", "pages": "23–24"}
+      ]
+    },
+    {
+      "id": "section-chant-dialects",
+      "chapterId": "chapter-02-early-church",
+      "order": 2,
+      "title": "Una geografia de litúrgies",
+      "argument": "El terme «cant medieval» amaga una pluralitat de dialectes: romà antic, ambrosià, beneventà, gal·licà, hispànic o mossàrab, entre altres. La seva substitució desigual pel repertori francoromà anomenat gregorià reflecteix aliances polítiques, reformes eclesiàstiques i xarxes de centres d'ensenyament, no una simple selecció estètica.",
+      "context": "L'aliança entre papat i monarquia carolíngia afavorí una litúrgia comuna als territoris francs i, després, a una gran part d'Occident.",
+      "sourceRefs": [
+        {"sourceId": "burkholder-grout-palisca-2019", "pages": "51–56"},
+        {"sourceId": "cpm-francisco-guerrero-2014", "pages": "24–27"}
+      ]
+    },
+    {
+      "id": "section-memory-writing",
+      "chapterId": "chapter-02-early-church",
+      "order": 3,
+      "title": "Memòria, escola i escriptori",
+      "argument": "Els primers neumes no substituïen el mestre: recordaven contorns i gestos d'una melodia ja apresa. La notació es torna gradualment més precisa perquè forma part d'un sistema institucional de còpia, classificació i ensenyament. L'escriptori monàstic no és només un lloc on es conserva música, sinó un laboratori que transforma la manera de pensar-la.",
+      "practices": "Cantors i comunitats aprenien grans repertoris mitjançant repetició, fórmules i memòria; l'escriptura actuava com a suport i autoritat.",
+      "sourceRefs": [
+        {"sourceId": "burkholder-grout-palisca-2019", "pages": "56–73"},
+        {"sourceId": "cpm-francisco-guerrero-2014", "pages": "31–32"}
+      ]
+    },
+    {
+      "id": "section-mass-office",
+      "chapterId": "chapter-03-roman-liturgy",
+      "order": 1,
+      "title": "La missa i l'ofici",
+      "argument": "La forma d'un cant depèn de la seva funció. A la missa, els textos del propi canvien segons el calendari i els de l'ordinari romanen relativament estables; a l'ofici, salms, antífones, himnes i responsoris distribueixen la pregària al llarg del dia. Escoltar repertori gregorià sense aquest marc elimina una part essencial del seu significat.",
+      "institutions": "Monestirs, catedrals, esglésies i comunitats religioses organitzaven el temps quotidià i anual mitjançant la litúrgia.",
+      "sourceRefs": [
+        {"sourceId": "burkholder-grout-palisca-2019", "pages": "75–92"},
+        {"sourceId": "cpm-francisco-guerrero-2014", "pages": "27–31"}
+      ]
+    },
+    {
+      "id": "section-mode-notation",
+      "chapterId": "chapter-03-roman-liturgy",
+      "order": 2,
+      "title": "Mode i notació",
+      "argument": "Els vuit modes eclesiàstics classifiquen melodies segons final, àmbit i fórmules característiques; no equivalen a escales majors i menors. La línia i el sistema de solmització associats a Guido d'Arezzo fan més visibles les altures i redueixen el temps d'aprenentatge, però la interpretació continua depenent de la prosòdia i de la tradició oral.",
+      "musicalLanguage": "El perfil melòdic, la nota final i les fórmules de recitació orienten la percepció modal més que una successió abstracta d'altures.",
+      "sourceRefs": [{"sourceId": "cpm-francisco-guerrero-2014", "pages": "31–33"}]
+    },
+    {
+      "id": "section-chant-expansions",
+      "chapterId": "chapter-03-roman-liturgy",
+      "order": 3,
+      "title": "Trops, seqüències i drama",
+      "argument": "La litúrgia medieval no fou un museu tancat. Els trops afegiren text o música a cants preexistents; les seqüències desenvoluparen formes pròpies després de l'Al·leluia; el drama litúrgic convertí episodis bíblics en acció cantada. Hildegarda portà aquesta capacitat inventiva a melodies d'àmbit ampli i a una poesia visionària singular.",
+      "practices": "Afegir, glosar i dramatitzar permetia actualitzar el repertori dins marcs rituals autoritzats.",
+      "sourceRefs": [
+        {"sourceId": "burkholder-grout-palisca-2019", "pages": "93–99"},
+        {"sourceId": "cpm-francisco-guerrero-2014", "pages": "33–34"}
+      ]
+    },
+    {
+      "id": "section-andalusian-song",
+      "chapterId": "chapter-04-medieval-song-dance",
+      "order": 1,
+      "title": "Al-Àndalus i la Mediterrània",
+      "argument": "La cançó andalusina situa la península Ibèrica dins circuits poètics i musicals àrabs, berbers, jueus i cristians. Formes estròfiques com la muwaššaḥa i el zajal recorden que la història musical medieval europea no es pot explicar només des de les corts cristianes del nord. La transmissió posterior, però, dificulta atribuir melodies concretes a l'edat mitjana sense cautela.",
+      "context": "Còrdova i altres centres urbans connectaven cort, poesia, teoria i pràctiques d'origen divers.",
+      "sourceRefs": [{"sourceId": "cpm-francisco-guerrero-2014", "pages": "35–37"}]
+    },
+    {
+      "id": "section-troubadour-courts",
+      "chapterId": "chapter-04-medieval-song-dance",
+      "order": 2,
+      "title": "Trobadors, trouvères i amor cortès",
+      "argument": "El repertori trobadoresc construeix una veu poètica que negocia desig, distància, jerarquia i reputació. El compositor del text i la melodia no sempre n'era l'intèrpret: joglars i altres professionals feien circular les cançons. Les melodies conservades admeten ornamentació i acompanyament, però aquestes decisions rarament estan especificades per la font.",
+      "institutions": "Corts occitanes i franceses, xarxes aristocràtiques i mobilitat professional sostingueren el repertori.",
+      "sourceRefs": [
+        {"sourceId": "burkholder-grout-palisca-2019", "pages": "101–114"},
+        {"sourceId": "cpm-francisco-guerrero-2014", "pages": "37–44"}
+      ]
+    },
+    {
+      "id": "section-iberian-song-dance",
+      "chapterId": "chapter-04-medieval-song-dance",
+      "order": 3,
+      "title": "Cantigues, instruments i dansa",
+      "argument": "Les Cantigas de Santa Maria combinen llengua galaicoportuguesa, narració de miracles, lloança mariana i imatge cortesana. Les miniatures documenten instruments i pràctiques, però no prescriuen una plantilla única. Estampies, saltarelli i altres danses instrumentals conserven estructures repetitives que conviden a variació, memòria corporal i improvisació.",
+      "practices": "Veu, instruments, percussió i dansa podien combinar-se de maneres que els manuscrits només suggereixen.",
+      "sourceRefs": [
+        {"sourceId": "burkholder-grout-palisca-2019", "pages": "114–120"},
+        {"sourceId": "cpm-francisco-guerrero-2014", "pages": "44–48"}
+      ]
+    },
+    {
+      "id": "section-early-organum",
+      "chapterId": "chapter-05-thirteenth-century-polyphony",
+      "order": 1,
+      "title": "Amplificar el cant",
+      "argument": "Els primers tractats descriuen l'organum com una pràctica que afegeix una veu a un cant preexistent. El moviment paral·lel és només un dels procediments: l'evolució cap al moviment contrari, la llibertat intervàl·lica i les llargues melismes de la polifonia aquitana mostra una experimentació sostinguda sobre consonància i independència vocal.",
+      "musicalLanguage": "Una veu litúrgica funciona com a fonament; l'altra la dobla, la contrasta o desplega moltes notes sobre cada so sostingut.",
+      "sourceRefs": [
+        {"sourceId": "burkholder-grout-palisca-2019", "pages": "121–128"},
+        {"sourceId": "cpm-francisco-guerrero-2014", "pages": "49–51"}
+      ]
+    },
+    {
+      "id": "section-notre-dame",
+      "chapterId": "chapter-05-thirteenth-century-polyphony",
+      "order": 2,
+      "title": "Notre-Dame i el temps mesurat",
+      "argument": "El repertori associat a Notre-Dame combina seccions de cant amb organum a dues, tres o quatre veus. Els modes rítmics donen patrons recognoscibles a les veus superiors i permeten coordinar estructures llargues. Els noms de Léonin i Pérotin provenen de testimonis posteriors; són punts de referència dins una cultura institucional i col·lectiva de composició.",
+      "institutions": "La catedral, la seva escola i el calendari de grans festes proporcionen espai, cantors formats i ocasions per a obres monumentals.",
+      "sourceRefs": [
+        {"sourceId": "burkholder-grout-palisca-2019", "pages": "128–140"},
+        {"sourceId": "cpm-francisco-guerrero-2014", "pages": "51–53"}
+      ]
+    },
+    {
+      "id": "section-motet-thirteenth",
+      "chapterId": "chapter-05-thirteenth-century-polyphony",
+      "order": 3,
+      "title": "Del clausula al motet",
+      "argument": "Quan una secció de discant rep textos nous a les veus superiors, neix el motet. Un fragment de cant pot quedar al tenor mentre altres veus articulen paraules diferents, fins i tot sagrades i profanes o en llengües diverses. Aquesta capacitat de reutilitzar i recontextualitzar materials converteix el motet en un laboratori central del segle XIII.",
+      "musicalLanguage": "La superposició de textos i patrons rítmics crea una escolta estratificada: cap veu no explica per si sola tota l'obra.",
+      "sourceRefs": [
+        {"sourceId": "burkholder-grout-palisca-2019", "pages": "142–155"},
+        {"sourceId": "cpm-francisco-guerrero-2014", "pages": "53–54"}
+      ]
+    },
+    {
+      "id": "section-ars-nova",
+      "chapterId": "chapter-06-fourteenth-century-france-italy",
+      "order": 1,
+      "title": "Una nova gramàtica del ritme",
+      "argument": "L'Ars Nova amplia la capacitat d'indicar divisions binàries i ternàries, valors menors i relacions proporcionals. La notació deixa de limitar-se als patrons dels modes rítmics i permet estructures més flexibles. La isorítmia organitza el tenor mitjançant la repetició independent d'un patró de durades i d'una successió d'altures.",
+      "musicalLanguage": "Síncopes, hockets, proporcions i cicles no coincidents fan perceptible una arquitectura temporal de gran precisió.",
+      "sourceRefs": [
+        {"sourceId": "burkholder-grout-palisca-2019", "pages": "157–167"},
+        {"sourceId": "cpm-francisco-guerrero-2014", "pages": "54–55"}
+      ]
+    },
+    {
+      "id": "section-machaut-forms",
+      "chapterId": "chapter-06-fourteenth-century-france-italy",
+      "order": 2,
+      "title": "Machaut: poeta, músic i autor",
+      "argument": "Machaut treballa tant amb el motet i la missa com amb les formes fixes de la cançó francesa. Ballade, rondeau i virelai relacionen retorns poètics i musicals de manera diferent. La cura amb què organitzà manuscrits de la seva obra reforça una identitat d'autor poc habitual i permet estudiar repertoris sagrats i profans dins un mateix projecte.",
+      "reception": "La Messe de Nostre Dame ocupa un lloc canònic, però no hauria d'ocultar la varietat i l'enginy de la seva producció de cançons.",
+      "sourceRefs": [
+        {"sourceId": "burkholder-grout-palisca-2019", "pages": "165–177"},
+        {"sourceId": "cpm-francisco-guerrero-2014", "pages": "55–57"}
+      ]
+    },
+    {
+      "id": "section-trecento-subtilior",
+      "chapterId": "chapter-06-fourteenth-century-france-italy",
+      "order": 3,
+      "title": "Trecento i Ars Subtilior",
+      "argument": "El Trecento italià desenvolupa madrigal, caccia i ballata amb una escriptura vocal sovint més orientada a la línia superior. Landini representa la cultura musical florentina i la seva ballata mostra formes memorables sense renunciar a la subtilesa contrapuntística. A les corts de finals de segle, l'Ars Subtilior converteix complexitat rítmica i notació visual en signe de distinció.",
+      "context": "Corts, ciutats i cercles alfabetitzats sostenen repertoris que poden ser alhora entreteniment, demostració d'enginy i objecte de col·lecció.",
+      "sourceRefs": [
+        {"sourceId": "burkholder-grout-palisca-2019", "pages": "177–192"},
+        {"sourceId": "cpm-francisco-guerrero-2014", "pages": "57–58"}
+      ]
+    }
+  ],
+  "people": [
+    {
+      "id": "pythagoras",
+      "name": "Pitàgores",
+      "dates": "c. 570–c. 495 aC",
+      "places": ["Samos", "Crotona"],
+      "roles": ["filòsof", "referent de la teoria musical"],
+      "biography": "Figura envoltada de tradició i atribucions tardanes, Pitàgores va donar nom a una escola que relacionava nombre, proporció i ordre del cosmos. Els relats sobre els seus experiments sonors no s'han de llegir com una biografia documental moderna.",
+      "contribution": "La tradició pitagòrica va expressar consonàncies com l'octava, la quinta i la quarta mitjançant proporcions simples. Aquesta unió de so i nombre va marcar la teoria musical grega, medieval i renaixentista, encara que les pràctiques musicals no es reduïssin a aquest sistema.",
+      "reception": "El «descobriment» de les proporcions és una narració fundacional; coneixements intervàl·lics comparables existiren en cultures anteriors.",
+      "workIds": [],
+      "sourceRefs": [{"sourceId": "cpm-francisco-guerrero-2014", "pages": "19–22"}]
+    },
+    {
+      "id": "plato",
+      "name": "Plató",
+      "dates": "c. 427–347 aC",
+      "places": ["Atenes"],
+      "roles": ["filòsof", "teòric de l'educació"],
+      "biography": "Filòsof atenenc i fundador de l'Acadèmia, Plató escrigué diàlegs on la música apareix vinculada a educació, política i ordre de l'ànima. Les seves observacions formen part d'un projecte filosòfic, no d'un tractat descriptiu sobre tota la música grega.",
+      "contribution": "La seva discussió de modes, ritme i formació moral és una font central per a la teoria de l'ethos. Va contribuir a una llarga tradició que atribueix a la música efectes sobre el caràcter i legitima la regulació dels repertoris educatius.",
+      "workIds": [],
+      "sourceRefs": [{"sourceId": "cpm-francisco-guerrero-2014", "pages": "20–22"}]
+    },
+    {
+      "id": "boethius",
+      "name": "Boeci",
+      "dates": "c. 480–524/525",
+      "places": ["Roma", "Pavia"],
+      "roles": ["filòsof", "transmissor de teoria musical"],
+      "biography": "Anici Manli Severí Boeci, funcionari i pensador de l'Antiguitat tardana, sintetitzà fonts gregues en llatí. La seva obra esdevingué una autoritat escolar durant segles, en un món musical cristià molt diferent del que descrivien les seves categories.",
+      "contribution": "La divisió entre música mundana, humana i instrumental i l'èmfasi en proporció van transmetre a l'edat mitjana una concepció especulativa de la música. El seu pes mostra que la història de la teoria i la història de la pràctica no avancen necessàriament juntes.",
+      "workIds": [],
+      "sourceRefs": [{"sourceId": "cpm-francisco-guerrero-2014", "pages": "22–24"}]
+    },
+    {
+      "id": "gregory-the-great",
+      "name": "Gregori el Gran",
+      "dates": "c. 540–604",
+      "places": ["Roma"],
+      "roles": ["papa", "figura d'atribució litúrgica"],
+      "biography": "Gregori I fou papa entre 590 i 604 i impulsà reformes eclesiàstiques, però la tradició que el presenta dictant tot el repertori gregorià prové de construccions posteriors. El cant que porta el seu nom es va formar durant un procés de diversos segles.",
+      "contribution": "La seva importància per a la història musical és sobretot simbòlica i institucional. Associar el repertori a un papa venerat en reforçava autoritat i antiguitat, però avui el cant gregorià s'entén com el resultat de transmissió, adaptació i unificació col·lectives.",
+      "reception": "La imatge del colom inspirant el cant al papa és una poderosa iconografia d'autoritat, no una crònica de composició.",
+      "workIds": [],
+      "sourceRefs": [{"sourceId": "cpm-francisco-guerrero-2014", "pages": "25–27"}]
+    },
+    {
+      "id": "guido-arezzo",
+      "name": "Guido d'Arezzo",
+      "dates": "c. 991/992–després de 1033",
+      "places": ["Arezzo", "Pomposa"],
+      "roles": ["monjo", "pedagog", "teòric"],
+      "biography": "Monjo i mestre actiu a la Itàlia del segle XI, Guido cercà mètodes que acceleressin l'aprenentatge d'un repertori litúrgic extens. La seva activitat mostra que la innovació notacional responia a problemes concrets de formació i coordinació institucional.",
+      "contribution": "La línia musical, les claus i la solmització basada en les síl·labes de l'himne Ut queant laxis van fer més precisa la lectura d'altures. No va «inventar la música escrita» tot sol, però articulà eines decisives dins una evolució col·lectiva.",
+      "workIds": ["ut-queant-laxis"],
+      "sourceRefs": [{"sourceId": "cpm-francisco-guerrero-2014", "pages": "31–33"}]
+    },
+    {
+      "id": "hildegard-bingen",
+      "name": "Hildegarda de Bingen",
+      "dates": "1098–1179",
+      "places": ["Bermersheim", "Rupertsberg", "Eibingen"],
+      "roles": ["abadessa", "compositora", "escriptora", "visionària"],
+      "biography": "Hildegarda dirigí comunitats femenines, mantingué correspondència amb autoritats i produí obres teològiques, científiques, poètiques i musicals. La seva posició religiosa li permeté formular una veu d'autoria excepcionalment identificable dins un repertori dominat per l'anonimat.",
+      "contribution": "Les seves antífones, responsoris, seqüències i el drama Ordo Virtutum amplien els contorns del cant amb àmbits extensos, melismes i imatges poètiques visionàries. La singularitat no l'aïlla de la litúrgia: transforma materials i pràctiques que coneix profundament.",
+      "musicalLanguage": "Melodies expansives, ascensos intensos, llargs melismes i una relació retòrica estreta entre paraula, imatge i registre.",
+      "workIds": ["o-vis-aeternitatis"],
+      "sourceRefs": [{"sourceId": "burkholder-grout-palisca-2019", "pages": "97–99"}]
+    },
+    {
+      "id": "bernart-ventadorn",
+      "name": "Bernart de Ventadorn",
+      "dates": "actiu c. 1147–c. 1170",
+      "places": ["Ventadorn", "Aquitània"],
+      "roles": ["trobador", "poeta", "compositor"],
+      "biography": "Bernart és un dels trobadors occitans amb més cançons i melodies conservades. Les seves vidas tardanes barregen notícia i ficció, de manera que el perfil biogràfic s'ha de distingir de la veu amorosa construïda pels poemes.",
+      "contribution": "Les seves cançons exemplifiquen el refinament formal i retòric de la fin'amor. Can vei la lauzeta transforma el vol de l'alosa en una imatge de desig i pèrdua, amb una melodia estròfica que sosté la memòria i la circulació del text.",
+      "workIds": ["can-vei-lauzeta"],
+      "sourceRefs": [
+        {"sourceId": "burkholder-grout-palisca-2019", "pages": "106–114"},
+        {"sourceId": "cpm-francisco-guerrero-2014", "pages": "37–40"}
+      ]
+    },
+    {
+      "id": "alfonso-x",
+      "name": "Alfons X el Savi",
+      "dates": "1221–1284",
+      "places": ["Toledo", "Sevilla", "Múrcia"],
+      "roles": ["rei", "mecenes", "promotor d'un projecte musical"],
+      "biography": "Rei de Castella i Lleó, Alfons X impulsà tallers de traducció, compilacions jurídiques, astronomia, poesia i les Cantigas de Santa Maria. El manuscrit presenta el rei com a autor, però el repertori és fruit d'una empresa cortesana col·lectiva.",
+      "contribution": "Les més de quatre-centes cantigues reuneixen lloances i miracles en galaicoportuguès, amb notació i miniatures instrumentals. El corpus és clau per estudiar devoció mariana, circulació de formes i autorepresentació del poder cortesà.",
+      "workIds": ["santa-maria-strela"],
+      "sourceRefs": [{"sourceId": "cpm-francisco-guerrero-2014", "pages": "44–47"}]
+    },
+    {
+      "id": "leonin",
+      "name": "Léonin",
+      "dates": "actiu a finals del segle XII",
+      "places": ["París"],
+      "roles": ["compositor atribuït", "mestre de polifonia"],
+      "biography": "Léonin és conegut principalment pel testimoni d'un estudiant anglès posterior, l'Anònim IV, que l'associa amb un gran llibre d'organum per al calendari litúrgic de Notre-Dame. La documentació obliga a mantenir prudent la seva identitat exacta.",
+      "contribution": "Se li atribueix una síntesi monumental de l'organum a dues veus, alternant seccions florides i discant. La seva figura representa el pas d'una pràctica d'amplificació del cant a repertoris escrits planificats a gran escala.",
+      "workIds": [],
+      "sourceRefs": [
+        {"sourceId": "burkholder-grout-palisca-2019", "pages": "128–136"},
+        {"sourceId": "cpm-francisco-guerrero-2014", "pages": "51–53"}
+      ]
+    },
+    {
+      "id": "perotin",
+      "name": "Pérotin",
+      "dates": "actiu c. 1200",
+      "places": ["París"],
+      "roles": ["compositor atribuït", "mestre de polifonia"],
+      "biography": "Pérotin també ens arriba mitjançant el testimoni de l'Anònim IV, que el descriu com a optimus discantor. Se'l relaciona amb organa a tres i quatre veus destinats a grans festivitats de Notre-Dame, dins una cultura de revisió de repertoris.",
+      "contribution": "Obres com Viderunt omnes converteixen fragments de cant sostingut en fonament d'una arquitectura de veus rítmicament coordinades. L'escala de la forma i la claredat dels patrons modals produeixen una experiència simultàniament ritual, acústica i monumental.",
+      "workIds": ["viderunt-omnes"],
+      "sourceRefs": [
+        {"sourceId": "burkholder-grout-palisca-2019", "pages": "128–140"},
+        {"sourceId": "cpm-francisco-guerrero-2014", "pages": "51–53"}
+      ]
+    },
+    {
+      "id": "philippe-vitry",
+      "name": "Philippe de Vitry",
+      "dates": "1291–1361",
+      "places": ["París", "Meaux"],
+      "roles": ["compositor", "poeta", "teòric", "bisbe"],
+      "biography": "Vitry participà en xarxes eclesiàstiques i cortesanes franceses i fou celebrat pels contemporanis com a intel·lectual. El tractat Ars nova s'associa al seu nom, tot i que la forma textual conservada i l'abast exacte de la seva autoria són objecte de debat.",
+      "contribution": "Representa la nova flexibilitat de la notació mensural i el desenvolupament del motet isorítmic. La seva importància rau tant en les obres com en la conceptualització d'una nova manera d'organitzar i escriure el temps musical.",
+      "workIds": [],
+      "sourceRefs": [
+        {"sourceId": "burkholder-grout-palisca-2019", "pages": "161–167"},
+        {"sourceId": "cpm-francisco-guerrero-2014", "pages": "54–55"}
+      ]
+    },
+    {
+      "id": "guillaume-machaut",
+      "name": "Guillaume de Machaut",
+      "dates": "c. 1300–1377",
+      "places": ["Reims", "Luxemburg", "França"],
+      "roles": ["compositor", "poeta", "secretari cortesà", "canonge"],
+      "biography": "Machaut serví Joan de Luxemburg, viatjà en ambients cortesans i acabà vinculat a la catedral de Reims. Supervisà manuscrits que reuneixen poesia i música, una circumstància extraordinària que permet observar com construïa la seva pròpia posteritat.",
+      "contribution": "Va dominar motet, missa, lai i formes fixes. La Messe de Nostre Dame integra moviments de l'ordinari a quatre veus, mentre les cançons exploren refrany, memòria i subtilesa rítmica. La seva amplitud impedeix reduir-lo a una sola obra monumental.",
+      "musicalLanguage": "Isorítmia, síncope, veus estratificades i una relació molt calculada entre forma poètica i retorn musical.",
+      "workIds": ["machaut-kyrie", "douce-dame-jolie"],
+      "sourceRefs": [
+        {"sourceId": "burkholder-grout-palisca-2019", "pages": "165–177"},
+        {"sourceId": "cpm-francisco-guerrero-2014", "pages": "55–57"}
+      ]
+    },
+    {
+      "id": "francesco-landini",
+      "name": "Francesco Landini",
+      "dates": "c. 1325–1397",
+      "places": ["Florència"],
+      "roles": ["compositor", "organista", "poeta"],
+      "biography": "Landini, cec des de la infantesa segons fonts biogràfiques, fou organista, poeta i una figura admirada de la vida florentina. La major part de la seva música conservada és profana i ocupa un lloc central en els manuscrits del Trecento.",
+      "contribution": "Les seves ballate combinen cantabilitat, forma clara i contrapunt refinat. La cadència que porta el seu nom —descens a la sisena abans de resoldre a l'octava— és un tret freqüent, encara que ni exclusiu ni inventat necessàriament per ell.",
+      "workIds": ["ecco-la-primavera"],
+      "sourceRefs": [
+        {"sourceId": "burkholder-grout-palisca-2019", "pages": "179–192"},
+        {"sourceId": "cpm-francisco-guerrero-2014", "pages": "57–58"}
+      ]
+    }
+  ],
+  "works": [
+    {
+      "id": "seikilos-epitaph",
+      "title": "Epitafi de Seikilos",
+      "personIds": [],
+      "attribution": "Anònim; inscripció associada a Seikilos",
+      "date": "segle I o II",
+      "genre": "cançó epitafi",
+      "forces": "veu amb possible acompanyament instrumental",
+      "context": "La melodia i el text apareixen gravats en una estela funerària, un cas excepcional en què notació, paraules i objecte material han sobreviscut junts.",
+      "analysis": "La línia és breu i sil·làbica, amb signes rítmics sobre el text. La reconstrucció permet seguir una frase completa, però el timbre, l'afinació exacta i l'acompanyament depenen de criteris moderns; l'enregistrament és una proposta, no una finestra transparent al passat.",
+      "listeningGuide": [
+        {"label": "Text i pulsació", "start": 0, "end": 64, "instruction": "Segueix com cada síl·laba rep una altura i com la pulsació converteix la inscripció en una frase respirable."}
+      ],
+      "recordings": [
+        {
+          "spotifyUri": "spotify:track:4iUOAqCQMmBuCWKEgeyPWM",
+          "spotifyUrl": "https://open.spotify.com/track/4iUOAqCQMmBuCWKEgeyPWM",
+          "performers": ["Petros Tabouris", "Ancient Greek Music Workshop", "Dafni Panourgia"],
+          "label": "FM Records",
+          "year": 1994,
+          "excerptStart": 0,
+          "excerptEnd": 64,
+          "pedagogicalNote": "Versió breu que permet comparar clarament text, melodia i reconstrucció instrumental."
+        }
+      ],
+      "sourceRefs": [{"sourceId": "cpm-francisco-guerrero-2014", "pages": "15–22"}]
+    },
+    {
+      "id": "puer-natus-est",
+      "title": "Puer natus est nobis",
+      "personIds": [],
+      "attribution": "Cant gregorià anònim",
+      "date": "repertori medieval",
+      "genre": "introit de la missa de Nadal",
+      "forces": "schola vocal a l'uníson",
+      "context": "L'introit acompanya l'entrada i obre la missa del dia de Nadal. El seu text i la seva forma responen a una funció litúrgica concreta, no a la lògica d'una peça de concert autònoma.",
+      "analysis": "L'antífona emmarca un vers de salm i projecta el text amb una línia modal flexible. La declamació alterna passatges més sil·làbics i petits grups melismàtics; la respiració compartida i la ressonància fan perceptible la dimensió comunitària del cant.",
+      "listeningGuide": [
+        {"label": "Entrada", "start": 0, "end": 55, "instruction": "Escolta l'atac comú i observa com la melodia s'expandeix sobre paraules destacades sense perdre la unitat verbal."},
+        {"label": "Retorn", "start": 115, "end": 195, "instruction": "Reconeix el retorn de l'antífona i com el mode dona sensació de repòs sense tonalitat major o menor."}
+      ],
+      "recordings": [
+        {
+          "spotifyUri": "spotify:track:1kN5aiPOZhcjansh6fxnKn",
+          "spotifyUrl": "https://open.spotify.com/track/1kN5aiPOZhcjansh6fxnKn",
+          "performers": ["Schola de Monjos de Montserrat"],
+          "ensemble": "Schola de Monjos de Montserrat",
+          "label": "Picap",
+          "year": 1964,
+          "excerptStart": 0,
+          "excerptEnd": 195,
+          "pedagogicalNote": "La dicció i el fraseig permeten seguir amb claredat la funció textual de l'introit."
+        }
+      ],
+      "sourceRefs": [{"sourceId": "cpm-francisco-guerrero-2014", "pages": "27–31"}]
+    },
+    {
+      "id": "ut-queant-laxis",
+      "title": "Ut queant laxis",
+      "personIds": ["guido-arezzo"],
+      "attribution": "Himne preexistent utilitzat per Guido com a recurs pedagògic",
+      "date": "segle XI",
+      "genre": "himne",
+      "forces": "veu o schola",
+      "context": "Guido associà les síl·labes inicials de versos successius —ut, re, mi, fa, sol, la— amb graus ascendents per facilitar l'aprenentatge i la lectura de melodies desconegudes.",
+      "analysis": "La importància històrica de l'himne no depèn d'una sofisticació formal, sinó de l'ús didàctic de les seves entrades successives. Escoltar-les com una escala moderna simplifica massa el sistema: funcionen dins l'hexacord i una pràctica de solmització.",
+      "listeningGuide": [
+        {"label": "Síl·labes guia", "start": 0, "end": 66, "instruction": "Identifica els inicis successius dels versos i relaciona'ls amb la funció mnemotècnica de la solmització."}
+      ],
+      "recordings": [
+        {
+          "spotifyUri": "spotify:track:0erqhPn6mrk5L6yK9nCSFj",
+          "spotifyUrl": "https://open.spotify.com/track/0erqhPn6mrk5L6yK9nCSFj",
+          "performers": ["Westminster Cathedral Choir", "Stephen Cleobury"],
+          "conductor": "Stephen Cleobury",
+          "ensemble": "Westminster Cathedral Choir",
+          "label": "Griffin Records",
+          "year": 2010,
+          "excerptStart": 0,
+          "excerptEnd": 66,
+          "pedagogicalNote": "Enregistrament explícitament presentat com a recurs d'ensenyament medieval."
+        }
+      ],
+      "sourceRefs": [{"sourceId": "cpm-francisco-guerrero-2014", "pages": "31–33"}]
+    },
+    {
+      "id": "o-vis-aeternitatis",
+      "title": "O vis aeternitatis",
+      "personIds": ["hildegard-bingen"],
+      "date": "segle XII",
+      "genre": "responsori",
+      "forces": "veus femenines",
+      "context": "El responsori forma part del repertori espiritual d'Hildegarda i associa una poesia teològica densa amb una línia d'ampli abast, pensada dins la vida ritual d'una comunitat femenina.",
+      "analysis": "La melodia s'estén mitjançant melismes que intensifiquen imatges textuals i explora registres amplis sense abandonar el pensament modal. Les repeticions responsorials creen memòria, mentre la flexibilitat del ritme segueix la prosòdia llatina.",
+      "listeningGuide": [
+        {"label": "Invocació", "start": 0, "end": 90, "instruction": "Escolta com l'ascens melòdic eixampla la paraula i converteix la invocació en un gest de contemplació."},
+        {"label": "Melisma", "start": 210, "end": 330, "instruction": "Segueix una sola síl·laba prolongada i observa com el moviment crea intensitat sense pulsació regular."}
+      ],
+      "recordings": [
+        {
+          "spotifyUri": "spotify:track:0NeVBTHJ7lMUt7xczOObJG",
+          "spotifyUrl": "https://open.spotify.com/track/0NeVBTHJ7lMUt7xczOObJG",
+          "performers": ["Sequentia", "Barbara Thornton"],
+          "ensemble": "Sequentia",
+          "label": "Sony Music",
+          "year": 2013,
+          "excerptStart": 0,
+          "excerptEnd": 330,
+          "pedagogicalNote": "La veu sostinguda i l'espai acústic permeten percebre el desenvolupament melismàtic."
+        }
+      ],
+      "sourceRefs": [{"sourceId": "burkholder-grout-palisca-2019", "pages": "97–99"}]
+    },
+    {
+      "id": "can-vei-lauzeta",
+      "title": "Can vei la lauzeta mover",
+      "personIds": ["bernart-ventadorn"],
+      "date": "segle XII",
+      "genre": "canso trobadoresca",
+      "forces": "veu amb acompanyament instrumental opcional",
+      "context": "La cançó articula la fin'amor mitjançant la imatge de l'alosa i una veu lírica que oscil·la entre exaltació, pèrdua i renúncia. Circulà en una cultura cortesana i performativa.",
+      "analysis": "La mateixa melodia serveix les diferents estrofes i afavoreix memòria i variació. El contorn equilibra frases recognoscibles i inflexions expressives; qualsevol acompanyament modern ha de ser llegit com una opció interpretativa davant una font principalment melòdica.",
+      "listeningGuide": [
+        {"label": "L'alosa", "start": 0, "end": 70, "instruction": "Memoritza la primera frase i observa com l'intèrpret modela el text sense una mètrica instrumental dominant."},
+        {"label": "Nova estrofa", "start": 70, "end": 150, "instruction": "Compara el retorn de la melodia amb les noves paraules i detecta petites variacions de dicció i ornament."}
+      ],
+      "recordings": [
+        {
+          "spotifyUri": "spotify:track:3lgCwhmABFg6DP1zUymIq8",
+          "spotifyUrl": "https://open.spotify.com/track/3lgCwhmABFg6DP1zUymIq8",
+          "performers": ["Martin Best Mediaeval Ensemble"],
+          "ensemble": "Martin Best Mediaeval Ensemble",
+          "label": "Nimbus Records",
+          "year": 1997,
+          "excerptStart": 0,
+          "excerptEnd": 150,
+          "pedagogicalNote": "Versió clara per estudiar forma estròfica, text i llibertat de l'acompanyament."
+        }
+      ],
+      "sourceRefs": [
+        {"sourceId": "burkholder-grout-palisca-2019", "pages": "106–114"},
+        {"sourceId": "cpm-francisco-guerrero-2014", "pages": "37–40"}
+      ]
+    },
+    {
+      "id": "santa-maria-strela",
+      "title": "Santa Maria, strela do dia (CSM 100)",
+      "personIds": ["alfonso-x"],
+      "attribution": "Projecte cortesà d'Alfons X",
+      "date": "segle XIII",
+      "genre": "cantiga de lloança",
+      "forces": "veu i instruments en la reconstrucció",
+      "context": "La cantiga número 100 és una lloança mariana en galaicoportuguès dins el gran projecte manuscrit promogut per Alfons X. La seva tornada facilita participació, memòria i reconeixement.",
+      "analysis": "La forma estròfica alterna cobles i refrany, amb una melodia que retorna com a eix del discurs. Les fonts no imposen l'orquestració: la versió de Jordi Savall usa timbres instrumentals per situar la cançó en un imaginari cortesà mediterrani.",
+      "listeningGuide": [
+        {"label": "Refrany", "start": 0, "end": 55, "instruction": "Identifica la tornada i conserva'n el contorn per reconèixer-la quan reaparegui després de cada cobla."},
+        {"label": "Color instrumental", "start": 55, "end": 150, "instruction": "Diferencia la melodia transmesa de les decisions modernes d'instrumentació, ritme i ornamentació."}
+      ],
+      "recordings": [
+        {
+          "spotifyUri": "spotify:track:6x2hksJmoYaBXsilNGln64",
+          "spotifyUrl": "https://open.spotify.com/track/6x2hksJmoYaBXsilNGln64",
+          "performers": ["Jordi Savall"],
+          "conductor": "Jordi Savall",
+          "label": "Alia Vox",
+          "year": 2017,
+          "excerptStart": 0,
+          "excerptEnd": 150,
+          "pedagogicalNote": "Útil per discutir simultàniament forma estròfica i reconstrucció instrumental."
+        }
+      ],
+      "sourceRefs": [{"sourceId": "cpm-francisco-guerrero-2014", "pages": "44–47"}]
+    },
+    {
+      "id": "lamento-tristano",
+      "title": "Lamento di Tristano – La Rotta",
+      "personIds": [],
+      "attribution": "Anònim",
+      "date": "segle XIV",
+      "genre": "istampitta o dansa instrumental",
+      "forces": "conjunt instrumental",
+      "context": "Conservada en un manuscrit italià de danses, l'obra relaciona un moviment de caràcter lamentós amb una rotta més animada. La funció exacta i la instrumentació original no estan fixades.",
+      "analysis": "La successió de frases repetides crea una forma apta per memoritzar, variar i articular moviment. El contrast entre el lamento i la rotta mostra com tempo, accent i timbre poden transformar materials relacionats sense necessitat d'una narració verbal.",
+      "listeningGuide": [
+        {"label": "Lamento", "start": 0, "end": 95, "instruction": "Segueix les repeticions de cada frase i escolta quines ornamentacions fan que el retorn no sigui mecànic."},
+        {"label": "Rotta", "start": 95, "end": 190, "instruction": "Observa el canvi d'energia i com una pulsació més marcada suggereix la dimensió corporal de la dansa."}
+      ],
+      "recordings": [
+        {
+          "spotifyUri": "spotify:track:6qulVJmia2DO8QOqQiufQa",
+          "spotifyUrl": "https://open.spotify.com/track/6qulVJmia2DO8QOqQiufQa",
+          "performers": ["Ensemble Chominciamento di gioia"],
+          "ensemble": "Ensemble Chominciamento di gioia",
+          "label": "Tactus",
+          "year": 2012,
+          "excerptStart": 0,
+          "excerptEnd": 190,
+          "pedagogicalNote": "La separació expressiva de lamento i rotta facilita analitzar repetició, variació i dansa."
+        }
+      ],
+      "sourceRefs": [
+        {"sourceId": "burkholder-grout-palisca-2019", "pages": "116–120"},
+        {"sourceId": "cpm-francisco-guerrero-2014", "pages": "47–48"}
+      ]
+    },
+    {
+      "id": "viderunt-omnes",
+      "title": "Viderunt omnes",
+      "personIds": ["perotin"],
+      "attribution": "Atribuït a Pérotin",
+      "date": "c. 1198",
+      "genre": "organum quadruplum",
+      "forces": "quatre veus",
+      "context": "Compost per a la festa de Nadal a Notre-Dame de París, l'organum pren el gradual litúrgic com a fonament i l'expandeix en una construcció a quatre veus.",
+      "analysis": "El tenor sosté llargament notes del cant mentre tres veus superiors articulen patrons dels modes rítmics. L'alternança amb passatges de cant pla fa perceptible el salt d'escala: una síl·laba pot convertir-se en un espai sonor de molts compassos.",
+      "listeningGuide": [
+        {"label": "Entrada monumental", "start": 0, "end": 100, "instruction": "Aïlla mentalment la nota molt llarga del tenor i segueix els patrons entrellaçats de les tres veus superiors."},
+        {"label": "Canvi de textura", "start": 225, "end": 340, "instruction": "Detecta quan la coordinació rítmica es densifica i quan el discurs torna a una declamació més directa."}
+      ],
+      "recordings": [
+        {
+          "spotifyUri": "spotify:track:0WnEA2qKSPT5EUsINESMWa",
+          "spotifyUrl": "https://open.spotify.com/track/0WnEA2qKSPT5EUsINESMWa",
+          "performers": ["The Hilliard Ensemble"],
+          "ensemble": "The Hilliard Ensemble",
+          "label": "ECM Records",
+          "year": 1989,
+          "excerptStart": 0,
+          "excerptEnd": 340,
+          "pedagogicalNote": "La transparència de les quatre línies permet sentir tenor, modes rítmics i canvi de textura."
+        }
+      ],
+      "sourceRefs": [
+        {"sourceId": "burkholder-grout-palisca-2019", "pages": "128–140"},
+        {"sourceId": "cpm-francisco-guerrero-2014", "pages": "51–53"}
+      ]
+    },
+    {
+      "id": "machaut-kyrie",
+      "title": "Messe de Nostre Dame: Kyrie",
+      "personIds": ["guillaume-machaut"],
+      "date": "c. 1360",
+      "genre": "moviment de missa polifònica",
+      "forces": "quatre veus",
+      "context": "El Kyrie forma part de la Messe de Nostre Dame vinculada a Reims, una de les primeres versions completes de l'ordinari conservades sota el nom d'un sol compositor.",
+      "analysis": "Les veus inferiors articulen patrons isorítmics mentre les superiors despleguen invocacions melismàtiques. Les repeticions del text —Kyrie, Christe, Kyrie— permeten escoltar canvis de color i estructura dins una escriptura molt més complexa que el cant original.",
+      "listeningGuide": [
+        {"label": "Primer Kyrie", "start": 0, "end": 120, "instruction": "Escolta les respiracions conjuntes i prova de seguir la periodicitat profunda sota les síncopes de les veus."},
+        {"label": "Christe", "start": 120, "end": 280, "instruction": "Compara el nou registre i la nova combinació de línies amb la primera invocació sense buscar una melodia principal única."}
+      ],
+      "recordings": [
+        {
+          "spotifyUri": "spotify:track:0GdtnJydzs1827lp6s5Gfp",
+          "spotifyUrl": "https://open.spotify.com/track/0GdtnJydzs1827lp6s5Gfp",
+          "performers": ["Oxford Camerata", "Jeremy Summerly"],
+          "conductor": "Jeremy Summerly",
+          "ensemble": "Oxford Camerata",
+          "label": "Naxos",
+          "year": 1996,
+          "excerptStart": 0,
+          "excerptEnd": 280,
+          "pedagogicalNote": "Versió nítida i àmpliament disponible per distingir seccions, registres i densitat contrapuntística."
+        }
+      ],
+      "sourceRefs": [
+        {"sourceId": "burkholder-grout-palisca-2019", "pages": "165–177"},
+        {"sourceId": "cpm-francisco-guerrero-2014", "pages": "55–57"}
+      ]
+    },
+    {
+      "id": "douce-dame-jolie",
+      "title": "Douce dame jolie",
+      "personIds": ["guillaume-machaut"],
+      "date": "segle XIV",
+      "genre": "virelai",
+      "forces": "veu amb instruments en aquesta versió",
+      "context": "El virelai posa en escena la súplica amorosa mitjançant un refrany que retorna. És una porta d'entrada a la producció profana de Machaut i a la continuïtat de la cançó monòdica.",
+      "analysis": "El retorn del refrany estructura l'escolta i la forma poètica, mentre les estrofes despleguen material contrastant. L'acompanyament de llaüt i ud de l'enregistrament ressalta una lectura mediterrània moderna que no està prescrita íntegrament per la font.",
+      "listeningGuide": [
+        {"label": "Refrany", "start": 0, "end": 42, "instruction": "Memoritza el gest inicial i observa com el final de frase prepara el retorn de la mateixa súplica."},
+        {"label": "Estrofa i retorn", "start": 42, "end": 155, "instruction": "Segueix el contrast de la secció interior i identifica el moment exacte en què torna el refrany."}
+      ],
+      "recordings": [
+        {
+          "spotifyUri": "spotify:track:16EFosNh2wJGWP6KotAsK8",
+          "spotifyUrl": "https://open.spotify.com/track/16EFosNh2wJGWP6KotAsK8",
+          "performers": ["Munir Beken", "August Denhard"],
+          "label": "Sono Luminus",
+          "year": 2011,
+          "excerptStart": 0,
+          "excerptEnd": 155,
+          "pedagogicalNote": "L'acompanyament transparent ajuda a reconèixer el refrany i obre una discussió sobre reconstrucció."
+        }
+      ],
+      "sourceRefs": [
+        {"sourceId": "burkholder-grout-palisca-2019", "pages": "165–177"},
+        {"sourceId": "cpm-francisco-guerrero-2014", "pages": "55–57"}
+      ]
+    },
+    {
+      "id": "ecco-la-primavera",
+      "title": "Ecco la primavera",
+      "personIds": ["francesco-landini"],
+      "date": "segle XIV",
+      "genre": "ballata",
+      "forces": "dues veus i instruments en aquesta versió",
+      "context": "La ballata celebra l'arribada de la primavera dins la cultura profana del Trecento florentí. La brevetat i la forma clara la fan útil per percebre una altra via del segle XIV.",
+      "analysis": "Una línia superior cantable domina la textura mentre la veu inferior aporta suport contrapuntístic. La forma fa retornar la ripresa i concentra el contrast en una escala breu; les cadències revelen gestos típics del llenguatge italià tardomedieval.",
+      "listeningGuide": [
+        {"label": "Ripresa", "start": 0, "end": 28, "instruction": "Escolta la línia superior com a centre expressiu i fixa't en el gest cadencial abans de la nova secció."},
+        {"label": "Retorn final", "start": 45, "end": 75, "instruction": "Reconeix la tornada i compara com la instrumentació reforça el caràcter de celebració primaveral."}
+      ],
+      "recordings": [
+        {
+          "spotifyUri": "spotify:track:5X7sar5J4xCoAWt5XGZ1Nk",
+          "spotifyUrl": "https://open.spotify.com/track/5X7sar5J4xCoAWt5XGZ1Nk",
+          "performers": ["Early Music Consort of London", "David Munrow"],
+          "conductor": "David Munrow",
+          "ensemble": "Early Music Consort of London",
+          "label": "Decca",
+          "year": 1969,
+          "excerptStart": 0,
+          "excerptEnd": 75,
+          "pedagogicalNote": "Lectura compacta que fa molt audible la forma i la primacia de la línia superior."
+        }
+      ],
+      "sourceRefs": [
+        {"sourceId": "burkholder-grout-palisca-2019", "pages": "179–192"},
+        {"sourceId": "cpm-francisco-guerrero-2014", "pages": "57–58"}
+      ]
+    }
+  ],
+  "concepts": [
+    {
+      "id": "historical-evidence",
+      "term": "Evidència musical",
+      "definition": "Conjunt de rastres que permeten formular hipòtesis sobre pràctiques sonores del passat: objectes, espais, imatges, textos, tractats i notació. Cada tipus respon preguntes diferents i cap no restitueix per si sol una interpretació completa.",
+      "historicalScope": "Especialment decisiu per a l'Antiguitat i l'edat mitjana.",
+      "audibleTraits": ["No té un tret sonor únic", "Obliga a distingir dada i reconstrucció"],
+      "exampleWorkIds": ["seikilos-epitaph"],
+      "sourceRefs": [{"sourceId": "cpm-francisco-guerrero-2014", "pages": "15–17"}]
+    },
+    {
+      "id": "monody",
+      "term": "Monodia i heterofonia",
+      "definition": "La monodia organitza el discurs entorn d'una sola línia melòdica, encara que la interpretin moltes veus. Hi ha heterofonia quan diverses versions o ornamentacions d'aquesta línia sonen simultàniament.",
+      "historicalScope": "Cultures antigues, cant litúrgic i nombroses tradicions orals.",
+      "audibleTraits": ["Una línia central recognoscible", "Absència de contrapunt independent", "Possibles variants simultànies"],
+      "exampleWorkIds": ["seikilos-epitaph", "puer-natus-est"],
+      "sourceRefs": [{"sourceId": "cpm-francisco-guerrero-2014", "pages": "17–20"}]
+    },
+    {
+      "id": "ethos",
+      "term": "Ethos",
+      "definition": "Concepció grega segons la qual modes, ritmes i pràctiques musicals poden influir en el caràcter i la conducta. És una teoria filosòfica i educativa, no una llei acústica demostrada.",
+      "historicalScope": "Grècia antiga i recepció europea posterior.",
+      "audibleTraits": ["No correspon a una fórmula sonora fixa", "Relaciona escolta, educació i judici moral"],
+      "exampleWorkIds": ["seikilos-epitaph"],
+      "sourceRefs": [{"sourceId": "cpm-francisco-guerrero-2014", "pages": "20–22"}]
+    },
+    {
+      "id": "tetrachord",
+      "term": "Tetracord",
+      "definition": "Successió de quatre sons que abasta una quarta i funciona com a unitat bàsica en la teoria musical grega. La distribució dels intervals interns diferencia els gèneres diatònic, cromàtic i enharmònic.",
+      "historicalScope": "Teoria grega antiga i transmissions teòriques posteriors.",
+      "audibleTraits": ["Àmbit d'una quarta", "Distribucions intervàl·liques variables"],
+      "exampleWorkIds": ["seikilos-epitaph"],
+      "sourceRefs": [{"sourceId": "cpm-francisco-guerrero-2014", "pages": "17–20"}]
+    },
+    {
+      "id": "chant-dialect",
+      "term": "Dialecte de cant",
+      "definition": "Família regional de cants litúrgics amb repertori, fórmules i usos propis. El concepte fa visible la diversitat anterior i paral·lela a l'expansió del cant gregorià.",
+      "historicalScope": "Cristianisme tardoantic i altmedieval.",
+      "audibleTraits": ["Fórmules melòdiques regionals", "Diferències de text, mode i ornamentació"],
+      "exampleWorkIds": ["puer-natus-est"],
+      "sourceRefs": [{"sourceId": "burkholder-grout-palisca-2019", "pages": "51–56"}]
+    },
+    {
+      "id": "oral-transmission",
+      "term": "Transmissió oral",
+      "definition": "Aprenentatge i conservació del repertori mitjançant escolta, repetició, memòria i relació entre mestre i deixeble. Pot coexistir amb l'escriptura i continuar determinant detalls que la pàgina no fixa.",
+      "historicalScope": "Tota la història musical; central abans de la notació precisa.",
+      "audibleTraits": ["Variants entre interpretacions", "Ús de fórmules memoritzables", "Flexibilitat d'ornament i fraseig"],
+      "exampleWorkIds": ["puer-natus-est", "can-vei-lauzeta"],
+      "sourceRefs": [{"sourceId": "cpm-francisco-guerrero-2014", "pages": "23–33"}]
+    },
+    {
+      "id": "neume",
+      "term": "Neuma",
+      "definition": "Signe de les primeres notacions occidentals que indica un gest melòdic o un grup de sons. Els neumes més antics recorden el contorn sense fixar totes les altures; els sistemes sobre línies guanyen precisió.",
+      "historicalScope": "Cant litúrgic occidental, sobretot segles IX–XII.",
+      "audibleTraits": ["Agrupació de sons sobre una síl·laba", "Fraseig vinculat al text"],
+      "exampleWorkIds": ["puer-natus-est", "ut-queant-laxis"],
+      "sourceRefs": [{"sourceId": "cpm-francisco-guerrero-2014", "pages": "31–33"}]
+    },
+    {
+      "id": "mode",
+      "term": "Mode eclesiàstic",
+      "definition": "Sistema de classificació del cant segons nota final, àmbit i fórmules melòdiques. Els vuit modes medievals orienten memòria i composició, però no funcionen com les tonalitats major i menor.",
+      "historicalScope": "Cant litúrgic medieval i teoria posterior.",
+      "audibleTraits": ["Final característica", "Fórmules de recitació", "Contorn i àmbit modal"],
+      "exampleWorkIds": ["puer-natus-est", "o-vis-aeternitatis"],
+      "sourceRefs": [{"sourceId": "cpm-francisco-guerrero-2014", "pages": "30–33"}]
+    },
+    {
+      "id": "trope",
+      "term": "Trop",
+      "definition": "Addició de text, música o tots dos a un cant litúrgic preexistent. El trop comenta, amplia o localitza el repertori i mostra una creativitat activa dins la tradició ritual.",
+      "historicalScope": "Litúrgia occidental medieval, especialment segles IX–XII.",
+      "audibleTraits": ["Alternança entre material conegut i afegit", "Expansió d'una secció litúrgica"],
+      "exampleWorkIds": [],
+      "sourceRefs": [{"sourceId": "cpm-francisco-guerrero-2014", "pages": "33–34"}]
+    },
+    {
+      "id": "sequence",
+      "term": "Seqüència",
+      "definition": "Cant associat inicialment a la prolongació melismàtica de l'Al·leluia que desenvolupà textos i melodies propis, sovint en parelles de frases. Esdevingué un gènere litúrgic molt productiu.",
+      "historicalScope": "Litúrgia medieval, del segle IX en endavant.",
+      "audibleTraits": ["Frases aparellades", "Text sil·làbic o neumàtic", "Progressió estròfica"],
+      "exampleWorkIds": [],
+      "sourceRefs": [{"sourceId": "cpm-francisco-guerrero-2014", "pages": "33–34"}]
+    },
+    {
+      "id": "courtly-love",
+      "term": "Fin'amor",
+      "definition": "Codi poètic de la cançó trobadoresca que representa el desig com a servei, distància, disciplina i risc reputacional. No és un retrat directe de totes les relacions socials medievals.",
+      "historicalScope": "Corts occitanes i europees dels segles XII i XIII.",
+      "audibleTraits": ["Veu lírica en primera persona", "Forma estròfica", "Expressió controlada del desig"],
+      "exampleWorkIds": ["can-vei-lauzeta"],
+      "sourceRefs": [{"sourceId": "cpm-francisco-guerrero-2014", "pages": "37–44"}]
+    },
+    {
+      "id": "virelai",
+      "term": "Virelai",
+      "definition": "Forma fixa francesa amb refrany que obre i tanca l'obra i retorna entre estrofes segons un esquema regular. Relaciona de manera estreta l'organització de la poesia i la música.",
+      "historicalScope": "Cançó francesa dels segles XIII i XIV.",
+      "audibleTraits": ["Refrany recurrent", "Contrast entre tornada i estrofa", "Forma fàcilment recognoscible"],
+      "exampleWorkIds": ["douce-dame-jolie"],
+      "sourceRefs": [{"sourceId": "cpm-francisco-guerrero-2014", "pages": "55–57"}]
+    },
+    {
+      "id": "estampie",
+      "term": "Estampie",
+      "definition": "Forma de dansa medieval construïda amb una sèrie de frases o puncta repetides amb finals alternatius. La notació conserva l'estructura, però deixa oberts instrumentació i molts detalls rítmics.",
+      "historicalScope": "Repertori instrumental dels segles XIII i XIV.",
+      "audibleTraits": ["Frases repetides", "Finals oberts i tancats", "Pulsació apta per al moviment"],
+      "exampleWorkIds": ["lamento-tristano"],
+      "sourceRefs": [{"sourceId": "cpm-francisco-guerrero-2014", "pages": "47–48"}]
+    },
+    {
+      "id": "organum",
+      "term": "Organum",
+      "definition": "Pràctica polifònica que afegeix una o més veus a un cant preexistent. Pot anar del moviment nota contra nota a una veu florida sobre notes llargament sostingudes del tenor.",
+      "historicalScope": "Polifonia occidental, dels segles IX al XIII.",
+      "audibleTraits": ["Cant com a fonament", "Moviment coordinat o melismàtic", "Contrastos de textura"],
+      "exampleWorkIds": ["viderunt-omnes"],
+      "sourceRefs": [{"sourceId": "cpm-francisco-guerrero-2014", "pages": "49–53"}]
+    },
+    {
+      "id": "rhythmic-modes",
+      "term": "Modes rítmics",
+      "definition": "Patrons repetitius de durades llargues i breus emprats per coordinar veus a la polifonia de Notre-Dame. Permeten inferir ritme a partir de figures i agrupacions notacionals.",
+      "historicalScope": "Polifonia de finals del segle XII i del segle XIII.",
+      "audibleTraits": ["Patrons ternaris recurrents", "Coordinació regular de veus", "Impuls rítmic recognoscible"],
+      "exampleWorkIds": ["viderunt-omnes"],
+      "sourceRefs": [{"sourceId": "cpm-francisco-guerrero-2014", "pages": "51–53"}]
+    },
+    {
+      "id": "motet",
+      "term": "Motet medieval",
+      "definition": "Gènere polifònic nascut en afegir text a les veus superiors d'una clausula. Pot superposar textos diferents sobre un tenor derivat del cant i circular fora del seu context litúrgic inicial.",
+      "historicalScope": "Des del segle XIII, amb transformacions posteriors profundes.",
+      "audibleTraits": ["Veus amb textos simultanis", "Tenor repetitiu o preexistent", "Estratificació rítmica"],
+      "exampleWorkIds": [],
+      "sourceRefs": [{"sourceId": "cpm-francisco-guerrero-2014", "pages": "53–55"}]
+    },
+    {
+      "id": "isorhythm",
+      "term": "Isorítmia",
+      "definition": "Tècnica que combina un patró repetit de durades, la talea, amb una successió d'altures, el color, que pot tenir una longitud diferent. La seva desalineació organitza grans trams.",
+      "historicalScope": "Motet dels segles XIV i XV i moviments de missa relacionats.",
+      "audibleTraits": ["Periodicitat profunda", "Repeticions que no coincideixen sempre", "Arquitectura temporal de llarg abast"],
+      "exampleWorkIds": ["machaut-kyrie"],
+      "sourceRefs": [{"sourceId": "cpm-francisco-guerrero-2014", "pages": "54–57"}]
+    },
+    {
+      "id": "formes-fixes",
+      "term": "Formes fixes",
+      "definition": "Conjunt de formes de cançó francesa —ballade, rondeau i virelai— que regulen la disposició d'estrofes, refranys i música. No són motlles idèntics, sinó tres relacions diferents entre retorn poètic i musical.",
+      "historicalScope": "Cançó francesa dels segles XIV i XV.",
+      "audibleTraits": ["Refranys estructurals", "Repeticions planificades", "Correspondència entre poesia i música"],
+      "exampleWorkIds": ["douce-dame-jolie"],
+      "sourceRefs": [{"sourceId": "burkholder-grout-palisca-2019", "pages": "174–177"}]
+    },
+    {
+      "id": "ars-subtilior",
+      "term": "Ars Subtilior",
+      "definition": "Estil de finals del segle XIV caracteritzat per complexitat rítmica, proporcions, síncopes i, de vegades, notacions visuals extraordinàries. Estava vinculat a cercles cortesans especialitzats.",
+      "historicalScope": "Sobretot c. 1370–1420 a França, Avinyó i corts relacionades.",
+      "audibleTraits": ["Síncopes denses", "Canvis proporcionals", "Línies independents de gran dificultat"],
+      "exampleWorkIds": [],
+      "sourceRefs": [{"sourceId": "burkholder-grout-palisca-2019", "pages": "177–179"}]
+    }
+  ],
+  "sources": [
+    {
+      "id": "burkholder-grout-palisca-2019",
+      "type": "book",
+      "shortTitle": "Historia de la música occidental",
+      "fullCitation": "J. Peter Burkholder, Donald Jay Grout i Claude V. Palisca, Historia de la música occidental, traducció de Gabriel Menéndez Torrellas, Madrid: Alianza Editorial, 2019.",
+      "edition": "9a edició espanyola",
+      "year": 2019,
+      "url": "https://www.alianzaeditorial.es/libro/alianza-musica-am/historia-de-la-musica-occidental-j-peter-burkholder-9788491815549/",
+      "accessDate": "2026-07-19",
+      "notes": "L'índex fotografiat determina l'estructura i les pàgines del mapa; les afirmacions substantives requereixen contrast addicional."
+    },
+    {
+      "id": "cpm-francisco-guerrero-2014",
+      "type": "manual",
+      "shortTitle": "Historia de la música",
+      "fullCitation": "Conservatorio Profesional de Música «Francisco Guerrero», Historia de la música, 2014.",
+      "year": 2014,
+      "notes": "Manual pedagògic de 129 pàgines aportat en PDF, amb text extraïble; font complementària per a terminologia, periodització i context."
+    }
+  ]
+}

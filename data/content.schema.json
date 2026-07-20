@@ -1,0 +1,371 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://mozarc.github.io/tempo-historia-musica/data/content.schema.json",
+  "title": "Tempo — Catàleg historiogràfic",
+  "type": "object",
+  "additionalProperties": false,
+  "required": [
+    "schemaVersion",
+    "metadata",
+    "parts",
+    "chapters",
+    "sections",
+    "people",
+    "works",
+    "concepts",
+    "sources"
+  ],
+  "properties": {
+    "schemaVersion": {
+      "const": 1
+    },
+    "metadata": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["title", "language", "lastReviewed"],
+      "properties": {
+        "title": { "type": "string", "minLength": 1 },
+        "language": { "const": "ca" },
+        "lastReviewed": {
+          "type": "string",
+          "format": "date"
+        },
+        "editorialNote": { "type": "string" }
+      }
+    },
+    "parts": {
+      "type": "array",
+      "items": { "$ref": "#/$defs/part" }
+    },
+    "chapters": {
+      "type": "array",
+      "items": { "$ref": "#/$defs/chapter" }
+    },
+    "sections": {
+      "type": "array",
+      "items": { "$ref": "#/$defs/section" }
+    },
+    "people": {
+      "type": "array",
+      "items": { "$ref": "#/$defs/person" }
+    },
+    "works": {
+      "type": "array",
+      "items": { "$ref": "#/$defs/work" }
+    },
+    "concepts": {
+      "type": "array",
+      "items": { "$ref": "#/$defs/concept" }
+    },
+    "sources": {
+      "type": "array",
+      "items": { "$ref": "#/$defs/source" }
+    }
+  },
+  "$defs": {
+    "id": {
+      "type": "string",
+      "pattern": "^[a-z0-9]+(?:-[a-z0-9]+)*$"
+    },
+    "idList": {
+      "type": "array",
+      "items": { "$ref": "#/$defs/id" },
+      "uniqueItems": true
+    },
+    "sourceRef": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["sourceId"],
+      "properties": {
+        "sourceId": { "$ref": "#/$defs/id" },
+        "pages": {
+          "type": "string",
+          "description": "Pàgina o interval tal com apareix a l’edició citada."
+        },
+        "note": { "type": "string" }
+      }
+    },
+    "sourceRefs": {
+      "type": "array",
+      "items": { "$ref": "#/$defs/sourceRef" }
+    },
+    "part": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["id", "order", "title", "thesis", "chapterIds"],
+      "properties": {
+        "id": { "$ref": "#/$defs/id" },
+        "order": { "type": "integer", "minimum": 1 },
+        "title": { "type": "string", "minLength": 1 },
+        "subtitle": { "type": "string" },
+        "dates": { "type": "string" },
+        "thesis": { "type": "string", "minLength": 80 },
+        "chapterIds": { "$ref": "#/$defs/idList" },
+        "sourceRefs": { "$ref": "#/$defs/sourceRefs" }
+      }
+    },
+    "chapter": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "id",
+        "partId",
+        "order",
+        "title",
+        "synopsis",
+        "sectionIds",
+        "personIds",
+        "workIds",
+        "conceptIds",
+        "sourceRefs"
+      ],
+      "properties": {
+        "id": { "$ref": "#/$defs/id" },
+        "partId": { "$ref": "#/$defs/id" },
+        "order": { "type": "integer", "minimum": 1 },
+        "title": { "type": "string", "minLength": 1 },
+        "subtitle": { "type": "string" },
+        "dates": { "type": "string" },
+        "synopsis": { "type": "string", "minLength": 120 },
+        "sectionIds": { "$ref": "#/$defs/idList" },
+        "personIds": { "$ref": "#/$defs/idList" },
+        "workIds": { "$ref": "#/$defs/idList" },
+        "conceptIds": { "$ref": "#/$defs/idList" },
+        "sourceRefs": {
+          "allOf": [
+            { "$ref": "#/$defs/sourceRefs" },
+            { "minItems": 1 }
+          ]
+        }
+      }
+    },
+    "section": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["id", "chapterId", "order", "title", "argument", "sourceRefs"],
+      "properties": {
+        "id": { "$ref": "#/$defs/id" },
+        "chapterId": { "$ref": "#/$defs/id" },
+        "order": { "type": "integer", "minimum": 1 },
+        "title": { "type": "string", "minLength": 1 },
+        "argument": { "type": "string", "minLength": 120 },
+        "context": { "type": "string" },
+        "musicalLanguage": { "type": "string" },
+        "institutions": { "type": "string" },
+        "practices": { "type": "string" },
+        "reception": { "type": "string" },
+        "relatedIds": { "$ref": "#/$defs/idList" },
+        "sourceRefs": {
+          "allOf": [
+            { "$ref": "#/$defs/sourceRefs" },
+            { "minItems": 1 }
+          ]
+        }
+      }
+    },
+    "person": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "id",
+        "name",
+        "dates",
+        "roles",
+        "biography",
+        "contribution",
+        "workIds",
+        "sourceRefs"
+      ],
+      "properties": {
+        "id": { "$ref": "#/$defs/id" },
+        "name": { "type": "string", "minLength": 1 },
+        "dates": { "type": "string", "minLength": 1 },
+        "places": {
+          "type": "array",
+          "items": { "type": "string" },
+          "uniqueItems": true
+        },
+        "roles": {
+          "type": "array",
+          "items": { "type": "string" },
+          "minItems": 1,
+          "uniqueItems": true
+        },
+        "biography": { "type": "string", "minLength": 120 },
+        "contribution": { "type": "string", "minLength": 120 },
+        "musicalLanguage": { "type": "string" },
+        "reception": { "type": "string" },
+        "connections": { "$ref": "#/$defs/idList" },
+        "workIds": { "$ref": "#/$defs/idList" },
+        "sourceRefs": {
+          "allOf": [
+            { "$ref": "#/$defs/sourceRefs" },
+            { "minItems": 1 }
+          ]
+        }
+      }
+    },
+    "recording": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["spotifyUrl", "performers"],
+      "properties": {
+        "spotifyUri": {
+          "type": "string",
+          "pattern": "^spotify:(track|album|playlist):"
+        },
+        "spotifyUrl": {
+          "type": "string",
+          "pattern": "^https://open\\.spotify\\.com/(track|album|playlist)/"
+        },
+        "performers": {
+          "type": "array",
+          "items": { "type": "string" },
+          "minItems": 1
+        },
+        "conductor": { "type": "string" },
+        "ensemble": { "type": "string" },
+        "label": { "type": "string" },
+        "year": {
+          "type": "integer",
+          "minimum": 1900,
+          "maximum": 2100
+        },
+        "excerptStart": {
+          "type": "integer",
+          "minimum": 0,
+          "description": "Segons des de l’inici."
+        },
+        "excerptEnd": {
+          "type": "integer",
+          "minimum": 1,
+          "description": "Segons des de l’inici."
+        },
+        "pedagogicalNote": { "type": "string" }
+      }
+    },
+    "work": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "id",
+        "title",
+        "personIds",
+        "genre",
+        "context",
+        "analysis",
+        "listeningGuide",
+        "recordings",
+        "sourceRefs"
+      ],
+      "properties": {
+        "id": { "$ref": "#/$defs/id" },
+        "title": { "type": "string", "minLength": 1 },
+        "personIds": {
+          "$ref": "#/$defs/idList"
+        },
+        "attribution": {
+          "type": "string",
+          "description": "Autoria tradicional, anònima, col·lectiva o discutida."
+        },
+        "date": { "type": "string" },
+        "genre": { "type": "string", "minLength": 1 },
+        "forces": { "type": "string" },
+        "context": { "type": "string", "minLength": 80 },
+        "analysis": { "type": "string", "minLength": 120 },
+        "listeningGuide": {
+          "type": "array",
+          "minItems": 1,
+          "items": {
+            "type": "object",
+            "additionalProperties": false,
+            "required": ["label", "instruction"],
+            "properties": {
+              "label": { "type": "string", "minLength": 1 },
+              "start": { "type": "integer", "minimum": 0 },
+              "end": { "type": "integer", "minimum": 1 },
+              "instruction": { "type": "string", "minLength": 30 }
+            }
+          }
+        },
+        "recordings": {
+          "type": "array",
+          "items": { "$ref": "#/$defs/recording" }
+        },
+        "relatedIds": { "$ref": "#/$defs/idList" },
+        "sourceRefs": {
+          "allOf": [
+            { "$ref": "#/$defs/sourceRefs" },
+            { "minItems": 1 }
+          ]
+        }
+      }
+    },
+    "concept": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "id",
+        "term",
+        "definition",
+        "historicalScope",
+        "audibleTraits",
+        "exampleWorkIds",
+        "sourceRefs"
+      ],
+      "properties": {
+        "id": { "$ref": "#/$defs/id" },
+        "term": { "type": "string", "minLength": 1 },
+        "definition": { "type": "string", "minLength": 80 },
+        "historicalScope": { "type": "string", "minLength": 30 },
+        "audibleTraits": {
+          "type": "array",
+          "items": { "type": "string" },
+          "minItems": 1
+        },
+        "exampleWorkIds": { "$ref": "#/$defs/idList" },
+        "sourceRefs": {
+          "allOf": [
+            { "$ref": "#/$defs/sourceRefs" },
+            { "minItems": 1 }
+          ]
+        }
+      }
+    },
+    "source": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["id", "type", "shortTitle", "fullCitation"],
+      "properties": {
+        "id": { "$ref": "#/$defs/id" },
+        "type": {
+          "enum": [
+            "manual",
+            "book",
+            "article",
+            "critical-edition",
+            "primary-source",
+            "institutional-web"
+          ]
+        },
+        "shortTitle": { "type": "string", "minLength": 1 },
+        "fullCitation": { "type": "string", "minLength": 1 },
+        "edition": { "type": "string" },
+        "year": {
+          "type": "integer",
+          "minimum": 1400,
+          "maximum": 2100
+        },
+        "url": {
+          "type": "string",
+          "format": "uri"
+        },
+        "accessDate": {
+          "type": "string",
+          "format": "date"
+        },
+        "notes": { "type": "string" }
+      }
+    }
+  }
+}

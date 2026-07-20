@@ -1,0 +1,856 @@
+{
+  "$schema": "./coverage.schema.json",
+  "schemaVersion": 1,
+  "sourceId": "burkholder-grout-palisca-2019",
+  "lastReviewed": "2026-07-19",
+  "entries": [
+    {
+      "id": "part-ancient-medieval",
+      "order": 1,
+      "level": "part",
+      "title": "Els mons antic i medieval",
+      "pages": "23–192",
+      "status": "drafted",
+      "catalogIds": ["part-ancient-medieval"],
+      "missing": ["editorial-review", "publication"]
+    },
+    {
+      "id": "chapter-01-antiquity",
+      "parentId": "part-ancient-medieval",
+      "order": 1,
+      "level": "chapter",
+      "title": "La música a l'Antiguitat",
+      "pages": "23–44",
+      "topics": [
+        {"title": "La música més antiga", "page": 24},
+        {"title": "Mesopotàmia", "page": 25},
+        {"title": "Cronologia", "page": 28, "kind": "chronology"},
+        {"title": "La música en la vida i el pensament de l'antiga Grècia", "page": 29},
+        {"title": "Concursos d'interpretació i músics professionals", "page": 38, "kind": "context"},
+        {"title": "Roma", "page": 41},
+        {"title": "El llegat grec", "page": 42, "kind": "reception"}
+      ],
+      "status": "drafted",
+      "catalogIds": ["chapter-01-antiquity"],
+      "missing": ["editorial-review", "publication"]
+    },
+    {
+      "id": "chapter-02-early-church",
+      "parentId": "part-ancient-medieval",
+      "order": 2,
+      "level": "chapter",
+      "title": "L'Església cristiana en el primer mil·lenni",
+      "pages": "45–74",
+      "topics": [
+        {"title": "L'expansió del cristianisme", "page": 45},
+        {"title": "L'herència jueva", "page": 47},
+        {"title": "La música a l'Església primitiva", "page": 49},
+        {"title": "Divisions de l'Església i dialectes del cant", "page": 51},
+        {"title": "Cronologia", "page": 52, "kind": "chronology"},
+        {"title": "La notació", "page": 56, "kind": "innovation"},
+        {"title": "Teoria i pràctica", "page": 63},
+        {"title": "L'escriptori monàstic", "page": 64, "kind": "context"},
+        {"title": "Ecos històrics", "page": 73, "kind": "reception"}
+      ],
+      "status": "drafted",
+      "catalogIds": ["chapter-02-early-church"],
+      "missing": ["works", "guided-listening", "recordings", "editorial-review", "publication"]
+    },
+    {
+      "id": "chapter-03-roman-liturgy",
+      "parentId": "part-ancient-medieval",
+      "order": 3,
+      "level": "chapter",
+      "title": "La litúrgia romana i el cant pla",
+      "pages": "75–100",
+      "topics": [
+        {"title": "La litúrgia romana", "page": 75},
+        {"title": "La missa com a context ritual", "page": 78, "kind": "context"},
+        {"title": "Característiques del cant", "page": 82},
+        {"title": "Cronologia", "page": 83, "kind": "chronology"},
+        {"title": "Gèneres i formes del cant", "page": 84},
+        {"title": "Addicions al repertori autoritzat", "page": 93},
+        {"title": "Hildegarda de Bingen", "page": 97},
+        {"title": "Continuïtat del cant pla", "page": 99, "kind": "reception"}
+      ],
+      "status": "drafted",
+      "catalogIds": ["chapter-03-roman-liturgy"],
+      "missing": ["editorial-review", "publication"]
+    },
+    {
+      "id": "chapter-04-medieval-song-dance",
+      "parentId": "part-ancient-medieval",
+      "order": 4,
+      "level": "chapter",
+      "title": "La cançó i la música de dansa a l'edat mitjana",
+      "pages": "101–120",
+      "topics": [
+        {"title": "La societat europea, 800–1300", "page": 101, "kind": "context"},
+        {"title": "La cançó llatina i vernacla", "page": 104},
+        {"title": "Cronologia", "page": 105, "kind": "chronology"},
+        {"title": "Trobadors, ciutat i cort", "page": 106, "kind": "context"},
+        {"title": "Cançons de trobadors i trouvères", "page": 108},
+        {"title": "La forma AAB", "page": 112},
+        {"title": "Cançons en altres països", "page": 114},
+        {"title": "Instruments", "page": 116},
+        {"title": "Música de dansa", "page": 118},
+        {"title": "Queixes d'amants", "page": 120, "kind": "interpretation"}
+      ],
+      "status": "drafted",
+      "catalogIds": ["chapter-04-medieval-song-dance"],
+      "missing": ["editorial-review", "publication"]
+    },
+    {
+      "id": "chapter-05-thirteenth-century-polyphony",
+      "parentId": "part-ancient-medieval",
+      "order": 5,
+      "level": "chapter",
+      "title": "La polifonia al llarg del segle XIII",
+      "pages": "121–156",
+      "topics": [
+        {"title": "L'organum primitiu", "page": 122},
+        {"title": "La polifonia aquitana", "page": 126},
+        {"title": "Notre-Dame", "page": 128},
+        {"title": "Cronologia", "page": 136, "kind": "chronology"},
+        {"title": "El conductus polifònic", "page": 140},
+        {"title": "El motet", "page": 142},
+        {"title": "La polifonia anglesa", "page": 151},
+        {"title": "Una tradició perdurable", "page": 155, "kind": "reception"}
+      ],
+      "status": "drafted",
+      "catalogIds": ["chapter-05-thirteenth-century-polyphony"],
+      "missing": ["editorial-review", "publication"]
+    },
+    {
+      "id": "chapter-06-fourteenth-century-france-italy",
+      "parentId": "part-ancient-medieval",
+      "order": 6,
+      "level": "chapter",
+      "title": "La música francesa i italiana al segle XIV",
+      "pages": "157–192",
+      "topics": [
+        {"title": "La societat europea del segle XIV", "page": 157, "kind": "context"},
+        {"title": "Cronologia", "page": 158, "kind": "chronology"},
+        {"title": "L'Ars Nova a França", "page": 161},
+        {"title": "Guillaume de Machaut", "page": 165},
+        {"title": "La notació del ritme", "page": 167, "kind": "innovation"},
+        {"title": "Les formes fixes", "page": 174},
+        {"title": "L'Ars Subtilior", "page": 177},
+        {"title": "El Trecento italià", "page": 179},
+        {"title": "Interpretar la nova música", "page": 185, "kind": "interpretation"},
+        {"title": "Ecos de l'Art Nou", "page": 192, "kind": "reception"}
+      ],
+      "status": "drafted",
+      "catalogIds": ["chapter-06-fourteenth-century-france-italy"],
+      "missing": ["editorial-review", "publication"]
+    },
+    {
+      "id": "part-renaissance",
+      "order": 2,
+      "level": "part",
+      "title": "El Renaixement",
+      "pages": "199–368",
+      "status": "indexed",
+      "catalogIds": []
+    },
+    {
+      "id": "chapter-07-music-renaissance",
+      "parentId": "part-renaissance",
+      "order": 1,
+      "level": "chapter",
+      "title": "La música i el Renaixement",
+      "pages": "199–224",
+      "topics": [
+        {"title": "Europa entre 1400 i 1600", "page": 200, "kind": "context"},
+        {"title": "El Renaixement en la cultura i l'art", "page": 201},
+        {"title": "Cronologia", "page": 202, "kind": "chronology"},
+        {"title": "El Renaixement en la música", "page": 208},
+        {"title": "Músics cosmopolites i estil internacional", "page": 211},
+        {"title": "Paraules i música", "page": 215},
+        {"title": "Nous corrents del segle XVI", "page": 219},
+        {"title": "Nous repertoris i gèneres", "page": 220},
+        {"title": "La Reforma", "page": 220},
+        {"title": "Llegat renaixentista", "page": 221, "kind": "reception"},
+        {"title": "La música impresa", "page": 222, "kind": "innovation"}
+      ],
+      "status": "indexed",
+      "catalogIds": [],
+      "missing": ["context", "musical-language", "people", "works", "concepts", "sources", "guided-listening", "recordings", "editorial-review", "publication"]
+    },
+    {
+      "id": "chapter-08-england-burgundy",
+      "parentId": "part-renaissance",
+      "order": 2,
+      "level": "chapter",
+      "title": "Anglaterra i Borgonya al segle XV",
+      "pages": "225–252",
+      "topics": [
+        {"title": "La música anglesa", "page": 225},
+        {"title": "Cronologia", "page": 229, "kind": "chronology"},
+        {"title": "John Dunstable", "page": 231},
+        {"title": "Les terres borgonyones", "page": 234, "kind": "context"},
+        {"title": "Guillaume Dufay", "page": 238},
+        {"title": "La missa polifònica", "page": 242},
+        {"title": "Misses i dracs", "page": 248, "kind": "context"},
+        {"title": "Un llenguatge imperible", "page": 250, "kind": "reception"}
+      ],
+      "status": "indexed",
+      "catalogIds": [],
+      "missing": ["context", "musical-language", "people", "works", "concepts", "sources", "guided-listening", "recordings", "editorial-review", "publication"]
+    },
+    {
+      "id": "chapter-09-franco-flemish",
+      "parentId": "part-renaissance",
+      "order": 3,
+      "level": "chapter",
+      "title": "Els compositors francoflamencs, 1450–1520",
+      "pages": "253–282",
+      "topics": [
+        {"title": "Canvi polític i consolidació", "page": 253, "kind": "context"},
+        {"title": "Ockeghem i Busnois", "page": 254},
+        {"title": "La generació de 1480–1520", "page": 261},
+        {"title": "Cronologia", "page": 262, "kind": "chronology"},
+        {"title": "Josquin des Prez", "page": 267},
+        {"title": "Tipus de misses", "page": 278},
+        {"title": "Misses sobre material preexistent", "page": 278},
+        {"title": "El vell i el nou", "page": 280, "kind": "reception"}
+      ],
+      "status": "indexed",
+      "catalogIds": [],
+      "missing": ["context", "musical-language", "people", "works", "concepts", "sources", "guided-listening", "recordings", "editorial-review", "publication"]
+    },
+    {
+      "id": "chapter-10-reformation-sacred-music",
+      "parentId": "part-renaissance",
+      "order": 4,
+      "level": "chapter",
+      "title": "La música sacra a l'era de la Reforma",
+      "pages": "283–314",
+      "topics": [
+        {"title": "La Reforma", "page": 283, "kind": "context"},
+        {"title": "La música luterana", "page": 285},
+        {"title": "Cronologia", "page": 291, "kind": "chronology"},
+        {"title": "La música calvinista", "page": 292},
+        {"title": "La música sacra anglesa", "page": 295},
+        {"title": "La música catòlica", "page": 299},
+        {"title": "Palestrina", "page": 302},
+        {"title": "Espanya i el Nou Món", "page": 307},
+        {"title": "Alemanya i Europa oriental", "page": 309},
+        {"title": "La música jueva", "page": 312},
+        {"title": "Llegat", "page": 313, "kind": "reception"}
+      ],
+      "status": "indexed",
+      "catalogIds": [],
+      "missing": ["context", "musical-language", "people", "works", "concepts", "sources", "guided-listening", "recordings", "editorial-review", "publication"]
+    },
+    {
+      "id": "chapter-11-madrigal-secular-song",
+      "parentId": "part-renaissance",
+      "order": 5,
+      "level": "chapter",
+      "title": "El madrigal i la cançó profana al segle XVI",
+      "pages": "315–342",
+      "topics": [
+        {"title": "El primer mercat musical", "page": 315, "kind": "context"},
+        {"title": "Espanya", "page": 316},
+        {"title": "Itàlia", "page": 318},
+        {"title": "Cronologia", "page": 319, "kind": "chronology"},
+        {"title": "El madrigal italià", "page": 320},
+        {"title": "França", "page": 334},
+        {"title": "Alemanya", "page": 336},
+        {"title": "Anglaterra", "page": 336},
+        {"title": "L'impacte del madrigal", "page": 340, "kind": "reception"}
+      ],
+      "status": "indexed",
+      "catalogIds": [],
+      "missing": ["context", "musical-language", "people", "works", "concepts", "sources", "guided-listening", "recordings", "editorial-review", "publication"]
+    },
+    {
+      "id": "chapter-12-instrumental-music",
+      "parentId": "part-renaissance",
+      "order": 6,
+      "level": "chapter",
+      "title": "El sorgiment de la música instrumental",
+      "pages": "343–368",
+      "topics": [
+        {"title": "Instruments", "page": 344},
+        {"title": "Cronologia", "page": 348, "kind": "chronology"},
+        {"title": "La dansa com a pràctica social", "page": 350, "kind": "context"},
+        {"title": "Tipus de música instrumental", "page": 352},
+        {"title": "Venècia", "page": 365},
+        {"title": "La independència de la música instrumental", "page": 368, "kind": "reception"}
+      ],
+      "status": "indexed",
+      "catalogIds": [],
+      "missing": ["context", "musical-language", "people", "works", "concepts", "sources", "guided-listening", "recordings", "editorial-review", "publication"]
+    },
+    {
+      "id": "part-seventeenth-century",
+      "order": 3,
+      "level": "part",
+      "title": "El segle XVII",
+      "pages": "375–517",
+      "status": "indexed",
+      "catalogIds": []
+    },
+    {
+      "id": "chapter-13-seventeenth-century-styles",
+      "parentId": "part-seventeenth-century",
+      "order": 1,
+      "level": "chapter",
+      "title": "Els nous estils del segle XVII",
+      "pages": "375–398",
+      "topics": [
+        {"title": "Europa al segle XVII", "page": 376, "kind": "context"},
+        {"title": "Cronologia", "page": 378, "kind": "chronology"},
+        {"title": "Del Renaixement al Barroc", "page": 379},
+        {"title": "Característiques generals de la música barroca", "page": 387},
+        {"title": "Innovacions perdurables", "page": 396, "kind": "innovation"}
+      ],
+      "status": "indexed",
+      "catalogIds": [],
+      "missing": ["context", "musical-language", "people", "works", "concepts", "sources", "guided-listening", "recordings", "editorial-review", "publication"]
+    },
+    {
+      "id": "chapter-14-opera-invention",
+      "parentId": "part-seventeenth-century",
+      "order": 2,
+      "level": "chapter",
+      "title": "La invenció de l'òpera",
+      "pages": "399–424",
+      "topics": [
+        {"title": "Precursors de l'òpera", "page": 399},
+        {"title": "Cronologia", "page": 404, "kind": "chronology"},
+        {"title": "Les primeres òperes", "page": 405},
+        {"title": "Claudio Monteverdi", "page": 410},
+        {"title": "La difusió de l'òpera italiana", "page": 415},
+        {"title": "La diva operística", "page": 420, "kind": "context"},
+        {"title": "Drama i teatre", "page": 422}
+      ],
+      "status": "indexed",
+      "catalogIds": [],
+      "missing": ["context", "musical-language", "people", "works", "concepts", "sources", "guided-listening", "recordings", "editorial-review", "publication"]
+    },
+    {
+      "id": "chapter-15-chamber-sacred-early-seventeenth",
+      "parentId": "part-seventeenth-century",
+      "order": 3,
+      "level": "chapter",
+      "title": "Música de cambra i música sacra a la primera meitat del segle XVII",
+      "pages": "425–454",
+      "topics": [
+        {"title": "Música vocal italiana de cambra", "page": 425},
+        {"title": "Música sacra catòlica", "page": 429},
+        {"title": "Música luterana", "page": 435},
+        {"title": "Cronologia", "page": 436, "kind": "chronology"},
+        {"title": "Heinrich Schütz", "page": 437},
+        {"title": "Música jueva", "page": 441},
+        {"title": "Música instrumental", "page": 442},
+        {"title": "Tradició i innovació", "page": 452, "kind": "reception"}
+      ],
+      "status": "indexed",
+      "catalogIds": [],
+      "missing": ["context", "musical-language", "people", "works", "concepts", "sources", "guided-listening", "recordings", "editorial-review", "publication"]
+    },
+    {
+      "id": "chapter-16-france-england-spain-new-world",
+      "parentId": "part-seventeenth-century",
+      "order": 4,
+      "level": "chapter",
+      "title": "França, Anglaterra, Espanya i el Nou Món al segle XVII",
+      "pages": "455–488",
+      "topics": [
+        {"title": "França", "page": 456},
+        {"title": "El Grand Siècle", "page": 460, "kind": "context"},
+        {"title": "Anglaterra", "page": 475},
+        {"title": "Cronologia", "page": 476, "kind": "chronology"},
+        {"title": "Espanya i el Nou Món", "page": 483},
+        {"title": "Estils nacionals", "page": 487}
+      ],
+      "status": "indexed",
+      "catalogIds": [],
+      "missing": ["context", "musical-language", "people", "works", "concepts", "sources", "guided-listening", "recordings", "editorial-review", "publication"]
+    },
+    {
+      "id": "chapter-17-italy-germany-late-seventeenth",
+      "parentId": "part-seventeenth-century",
+      "order": 5,
+      "level": "chapter",
+      "title": "Itàlia i Alemanya a la segona meitat del segle XVII",
+      "pages": "489–517",
+      "topics": [
+        {"title": "Itàlia", "page": 489},
+        {"title": "Cronologia", "page": 490, "kind": "chronology"},
+        {"title": "L'ària da capo", "page": 493},
+        {"title": "El taller de Stradivari", "page": 500, "kind": "context"},
+        {"title": "Alemanya i Àustria", "page": 505},
+        {"title": "Llavors de futur", "page": 517, "kind": "reception"}
+      ],
+      "status": "indexed",
+      "catalogIds": [],
+      "missing": ["context", "musical-language", "people", "works", "concepts", "sources", "guided-listening", "recordings", "editorial-review", "publication"]
+    },
+    {
+      "id": "part-eighteenth-century",
+      "order": 4,
+      "level": "part",
+      "title": "El segle XVIII",
+      "pages": "523–700",
+      "status": "indexed",
+      "catalogIds": []
+    },
+    {
+      "id": "chapter-18-italy-france-early-eighteenth",
+      "parentId": "part-eighteenth-century",
+      "order": 1,
+      "level": "chapter",
+      "title": "La primera meitat del segle XVIII a Itàlia i França",
+      "pages": "523–550",
+      "topics": [
+        {"title": "Una Europa en transformació", "page": 524, "kind": "context"},
+        {"title": "Cronologia", "page": 525, "kind": "chronology"},
+        {"title": "Itàlia", "page": 527},
+        {"title": "La veu de Farinelli", "page": 528, "kind": "interpretation"},
+        {"title": "Antonio Vivaldi", "page": 531},
+        {"title": "França", "page": 539},
+        {"title": "Jean-Philippe Rameau", "page": 542},
+        {"title": "Un públic volàtil", "page": 548, "kind": "reception"}
+      ],
+      "status": "indexed",
+      "catalogIds": [],
+      "missing": ["context", "musical-language", "people", "works", "concepts", "sources", "guided-listening", "recordings", "editorial-review", "publication"]
+    },
+    {
+      "id": "chapter-19-late-baroque-germans",
+      "parentId": "part-eighteenth-century",
+      "order": 2,
+      "level": "chapter",
+      "title": "Compositors alemanys del Barroc tardà",
+      "pages": "551–586",
+      "topics": [
+        {"title": "Contextos alemanys", "page": 551, "kind": "context"},
+        {"title": "Cronologia", "page": 554, "kind": "chronology"},
+        {"title": "Johann Sebastian Bach", "page": 555},
+        {"title": "Georg Friedrich Händel", "page": 571},
+        {"title": "Un llegat perdurable", "page": 583, "kind": "reception"}
+      ],
+      "status": "indexed",
+      "catalogIds": [],
+      "missing": ["context", "musical-language", "people", "works", "concepts", "sources", "guided-listening", "recordings", "editorial-review", "publication"]
+    },
+    {
+      "id": "chapter-20-enlightenment-taste-style",
+      "parentId": "part-eighteenth-century",
+      "order": 3,
+      "level": "chapter",
+      "title": "El gust i l'estil musicals durant la Il·lustració",
+      "pages": "587–606",
+      "topics": [
+        {"title": "L'Europa de la Il·lustració", "page": 587, "kind": "context"},
+        {"title": "El concert públic", "page": 592, "kind": "innovation"},
+        {"title": "Gust i estil musical", "page": 596},
+        {"title": "Cronologia", "page": 599, "kind": "chronology"},
+        {"title": "Un llegat il·lustrat", "page": 604, "kind": "reception"}
+      ],
+      "status": "indexed",
+      "catalogIds": [],
+      "missing": ["context", "musical-language", "people", "works", "concepts", "sources", "guided-listening", "recordings", "editorial-review", "publication"]
+    },
+    {
+      "id": "chapter-21-early-classical-opera-vocal",
+      "parentId": "part-eighteenth-century",
+      "order": 4,
+      "level": "chapter",
+      "title": "L'òpera i la música vocal en el primer Classicisme",
+      "pages": "607–632",
+      "topics": [
+        {"title": "Òpera còmica italiana", "page": 608},
+        {"title": "Cronologia", "page": 611, "kind": "chronology"},
+        {"title": "Òpera seriosa", "page": 613},
+        {"title": "Òpera en altres llengües", "page": 617},
+        {"title": "La reforma de l'òpera", "page": 622},
+        {"title": "Cançó i música sacra", "page": 624},
+        {"title": "Un nou llenguatge", "page": 630, "kind": "reception"}
+      ],
+      "status": "indexed",
+      "catalogIds": [],
+      "missing": ["context", "musical-language", "people", "works", "concepts", "sources", "guided-listening", "recordings", "editorial-review", "publication"]
+    },
+    {
+      "id": "chapter-22-sonata-symphony-concerto",
+      "parentId": "part-eighteenth-century",
+      "order": 5,
+      "level": "chapter",
+      "title": "Música instrumental: sonata, simfonia i concert",
+      "pages": "633–656",
+      "topics": [
+        {"title": "Instruments i conjunts", "page": 633},
+        {"title": "Gèneres i formes", "page": 637},
+        {"title": "Formes binàries", "page": 638},
+        {"title": "Visió de conjunt de les formes binàries", "page": 640},
+        {"title": "Música per a teclat", "page": 643},
+        {"title": "Cronologia", "page": 644, "kind": "chronology"},
+        {"title": "L'orquestra", "page": 648},
+        {"title": "Música d'entreteniment", "page": 654, "kind": "context"},
+        {"title": "L'instrument que canta", "page": 654, "kind": "interpretation"}
+      ],
+      "status": "indexed",
+      "catalogIds": [],
+      "missing": ["context", "musical-language", "people", "works", "concepts", "sources", "guided-listening", "recordings", "editorial-review", "publication"]
+    },
+    {
+      "id": "chapter-23-late-eighteenth-classical",
+      "parentId": "part-eighteenth-century",
+      "order": 6,
+      "level": "chapter",
+      "title": "La música clàssica a la segona meitat del segle XVIII",
+      "pages": "657–700",
+      "topics": [
+        {"title": "Joseph Haydn", "page": 658},
+        {"title": "Cronologia", "page": 678, "kind": "chronology"},
+        {"title": "Wolfgang Amadeus Mozart", "page": 679},
+        {"title": "La idea de música clàssica", "page": 700, "kind": "reception"}
+      ],
+      "status": "indexed",
+      "catalogIds": [],
+      "missing": ["context", "musical-language", "people", "works", "concepts", "sources", "guided-listening", "recordings", "editorial-review", "publication"]
+    },
+    {
+      "id": "part-nineteenth-century",
+      "order": 5,
+      "level": "part",
+      "title": "El segle XIX",
+      "pages": "705–941",
+      "status": "indexed",
+      "catalogIds": []
+    },
+    {
+      "id": "chapter-24-revolution-change",
+      "parentId": "part-nineteenth-century",
+      "order": 1,
+      "level": "chapter",
+      "title": "Revolució i canvi",
+      "pages": "705–734",
+      "topics": [
+        {"title": "Revolució, guerra i música, 1789–1815", "page": 705, "kind": "context"},
+        {"title": "Cronologia", "page": 707, "kind": "chronology"},
+        {"title": "Ludwig van Beethoven", "page": 708},
+        {"title": "La importància de Beethoven", "page": 733, "kind": "reception"}
+      ],
+      "status": "indexed",
+      "catalogIds": [],
+      "missing": ["context", "musical-language", "people", "works", "concepts", "sources", "guided-listening", "recordings", "editorial-review", "publication"]
+    },
+    {
+      "id": "chapter-25-romantic-song-piano",
+      "parentId": "part-nineteenth-century",
+      "order": 2,
+      "level": "chapter",
+      "title": "La generació romàntica: cançó i música per a piano",
+      "pages": "735–780",
+      "topics": [
+        {"title": "Un nou ordre, 1815–1848", "page": 736, "kind": "context"},
+        {"title": "El Romanticisme", "page": 740},
+        {"title": "Instruments industrials", "page": 742, "kind": "innovation"},
+        {"title": "La cançó", "page": 747},
+        {"title": "Cronologia", "page": 748, "kind": "chronology"},
+        {"title": "Música per a piano", "page": 760},
+        {"title": "Llegat de la generació romàntica", "page": 779, "kind": "reception"}
+      ],
+      "status": "indexed",
+      "catalogIds": [],
+      "missing": ["context", "musical-language", "people", "works", "concepts", "sources", "guided-listening", "recordings", "editorial-review", "publication"]
+    },
+    {
+      "id": "chapter-26-romantic-classical-forms",
+      "parentId": "part-nineteenth-century",
+      "order": 3,
+      "level": "chapter",
+      "title": "El Romanticisme en les formes clàssiques: música orquestral, de cambra i coral",
+      "pages": "781–814",
+      "topics": [
+        {"title": "Música orquestral", "page": 782},
+        {"title": "Cronologia", "page": 797, "kind": "chronology"},
+        {"title": "Música de cambra", "page": 798},
+        {"title": "Música coral", "page": 802},
+        {"title": "Romanticisme i tradició clàssica", "page": 812, "kind": "reception"}
+      ],
+      "status": "indexed",
+      "catalogIds": [],
+      "missing": ["context", "musical-language", "people", "works", "concepts", "sources", "guided-listening", "recordings", "editorial-review", "publication"]
+    },
+    {
+      "id": "chapter-27-romantic-opera-mid-century",
+      "parentId": "part-nineteenth-century",
+      "order": 4,
+      "level": "chapter",
+      "title": "Òpera romàntica i teatre musical fins a mitjan segle",
+      "pages": "815–844",
+      "topics": [
+        {"title": "Funcions de l'òpera", "page": 815, "kind": "context"},
+        {"title": "Nacionalisme", "page": 817},
+        {"title": "Itàlia", "page": 818},
+        {"title": "Cronologia", "page": 824, "kind": "chronology"},
+        {"title": "França", "page": 831},
+        {"title": "Alemanya", "page": 835},
+        {"title": "Rússia", "page": 837},
+        {"title": "Estats Units", "page": 838},
+        {"title": "L'òpera com a música d'art", "page": 842, "kind": "reception"}
+      ],
+      "status": "indexed",
+      "catalogIds": [],
+      "missing": ["context", "musical-language", "people", "works", "concepts", "sources", "guided-listening", "recordings", "editorial-review", "publication"]
+    },
+    {
+      "id": "chapter-28-opera-late-nineteenth",
+      "parentId": "part-nineteenth-century",
+      "order": 5,
+      "level": "chapter",
+      "title": "Òpera i teatre musical a la segona meitat del segle XIX",
+      "pages": "845–890",
+      "topics": [
+        {"title": "Tecnologia, política i nacionalisme", "page": 845, "kind": "context"},
+        {"title": "L'òpera", "page": 849},
+        {"title": "Richard Wagner", "page": 850},
+        {"title": "Wagner, nacionalisme i antisemitisme", "page": 860, "kind": "context"},
+        {"title": "Giuseppe Verdi", "page": 863},
+        {"title": "Compositors italians posteriors", "page": 871},
+        {"title": "França", "page": 873},
+        {"title": "Rússia", "page": 876},
+        {"title": "Cronologia", "page": 880, "kind": "chronology"},
+        {"title": "Altres nacions", "page": 886},
+        {"title": "Música escènica i públics", "page": 889, "kind": "reception"}
+      ],
+      "status": "indexed",
+      "catalogIds": [],
+      "missing": ["context", "musical-language", "people", "works", "concepts", "sources", "guided-listening", "recordings", "editorial-review", "publication"]
+    },
+    {
+      "id": "chapter-29-late-romantic-germany-austria",
+      "parentId": "part-nineteenth-century",
+      "order": 6,
+      "level": "chapter",
+      "title": "El Romanticisme tardà a Alemanya i Àustria",
+      "pages": "891–916",
+      "topics": [
+        {"title": "Dicotomies i disputes", "page": 891, "kind": "context"},
+        {"title": "Cronologia", "page": 894, "kind": "chronology"},
+        {"title": "Johannes Brahms", "page": 895},
+        {"title": "Els wagnerians", "page": 907},
+        {"title": "Arribar al públic", "page": 915, "kind": "reception"}
+      ],
+      "status": "indexed",
+      "catalogIds": [],
+      "missing": ["context", "musical-language", "people", "works", "concepts", "sources", "guided-listening", "recordings", "editorial-review", "publication"]
+    },
+    {
+      "id": "chapter-30-divergent-traditions",
+      "parentId": "part-nineteenth-century",
+      "order": 7,
+      "level": "chapter",
+      "title": "Tradicions divergents a la segona meitat del segle XIX",
+      "pages": "917–941",
+      "topics": [
+        {"title": "França", "page": 918},
+        {"title": "Europa oriental i septentrional", "page": 921},
+        {"title": "Cronologia", "page": 928, "kind": "chronology"},
+        {"title": "Estats Units", "page": 933},
+        {"title": "Recepció i reconeixement", "page": 941, "kind": "reception"}
+      ],
+      "status": "indexed",
+      "catalogIds": [],
+      "missing": ["context", "musical-language", "people", "works", "concepts", "sources", "guided-listening", "recordings", "editorial-review", "publication"]
+    },
+    {
+      "id": "part-twentieth-century-and-after",
+      "order": 6,
+      "level": "part",
+      "title": "El segle XX i després",
+      "pages": "947–1229",
+      "status": "indexed",
+      "catalogIds": []
+    },
+    {
+      "id": "chapter-31-early-twentieth-vernacular",
+      "parentId": "part-twentieth-century-and-after",
+      "order": 1,
+      "level": "chapter",
+      "title": "Els inicis del segle XX: música vernacla",
+      "pages": "947–962",
+      "topics": [
+        {"title": "Temps moderns, 1898–1918", "page": 947, "kind": "context"},
+        {"title": "El so enregistrat", "page": 950, "kind": "innovation"},
+        {"title": "Tradicions vernacles", "page": 953},
+        {"title": "Cronologia", "page": 954, "kind": "chronology"},
+        {"title": "Música afroamericana", "page": 958},
+        {"title": "Clàssics vernacles", "page": 961, "kind": "reception"}
+      ],
+      "status": "indexed",
+      "catalogIds": [],
+      "missing": ["context", "musical-language", "people", "works", "concepts", "sources", "guided-listening", "recordings", "editorial-review", "publication"]
+    },
+    {
+      "id": "chapter-32-early-twentieth-classical",
+      "parentId": "part-twentieth-century-and-after",
+      "order": 2,
+      "level": "chapter",
+      "title": "Les primeres dècades del segle XX: la tradició clàssica",
+      "pages": "963–1002",
+      "topics": [
+        {"title": "La tradició clàssica moderna", "page": 964},
+        {"title": "Cronologia", "page": 966, "kind": "chronology"},
+        {"title": "Modernisme alemany: Mahler i Strauss", "page": 967},
+        {"title": "Gustav Mahler", "page": 968},
+        {"title": "Modernisme francès: Debussy i Ravel", "page": 976},
+        {"title": "Modernisme i tradicions nacionals", "page": 986},
+        {"title": "L'avantguarda", "page": 995},
+        {"title": "Romanticisme tardà o modernitat?", "page": 1000, "kind": "reception"}
+      ],
+      "status": "indexed",
+      "catalogIds": [],
+      "missing": ["context", "musical-language", "people", "works", "concepts", "sources", "guided-listening", "recordings", "editorial-review", "publication"]
+    },
+    {
+      "id": "chapter-33-radical-modernists",
+      "parentId": "part-twentieth-century-and-after",
+      "order": 3,
+      "level": "chapter",
+      "title": "Modernistes radicals",
+      "pages": "1003–1052",
+      "topics": [
+        {"title": "Arnold Schönberg", "page": 1004},
+        {"title": "L'expressionisme", "page": 1010, "kind": "context"},
+        {"title": "Cronologia", "page": 1016, "kind": "chronology"},
+        {"title": "Alban Berg", "page": 1017},
+        {"title": "Anton Webern", "page": 1020},
+        {"title": "Igor Stravinsky", "page": 1023},
+        {"title": "Béla Bartók", "page": 1034},
+        {"title": "Charles Ives", "page": 1043},
+        {"title": "Compositor i públic", "page": 1051, "kind": "reception"}
+      ],
+      "status": "indexed",
+      "catalogIds": [],
+      "missing": ["context", "musical-language", "people", "works", "concepts", "sources", "guided-listening", "recordings", "editorial-review", "publication"]
+    },
+    {
+      "id": "chapter-34-interwar-jazz-popular",
+      "parentId": "part-twentieth-century-and-after",
+      "order": 4,
+      "level": "chapter",
+      "title": "Entre les dues guerres mundials: jazz i música popular",
+      "pages": "1053–1076",
+      "topics": [
+        {"title": "El període d'entreguerres", "page": 1053, "kind": "context"},
+        {"title": "Cronologia", "page": 1057, "kind": "chronology"},
+        {"title": "Teatre musical i cançó popular nord-americana", "page": 1058},
+        {"title": "L'era del jazz", "page": 1062},
+        {"title": "Duke Ellington", "page": 1069},
+        {"title": "Música cinematogràfica", "page": 1072},
+        {"title": "Mitjans de masses i música popular", "page": 1074, "kind": "reception"}
+      ],
+      "status": "indexed",
+      "catalogIds": [],
+      "missing": ["context", "musical-language", "people", "works", "concepts", "sources", "guided-listening", "recordings", "editorial-review", "publication"]
+    },
+    {
+      "id": "chapter-35-interwar-classical",
+      "parentId": "part-twentieth-century-and-after",
+      "order": 5,
+      "level": "chapter",
+      "title": "Entre les dues guerres mundials: la tradició clàssica",
+      "pages": "1077–1108",
+      "topics": [
+        {"title": "Música, política i pobles", "page": 1077, "kind": "context"},
+        {"title": "Cronologia", "page": 1078, "kind": "chronology"},
+        {"title": "França", "page": 1080},
+        {"title": "Alemanya", "page": 1083},
+        {"title": "Unió Soviètica", "page": 1089},
+        {"title": "Les Amèriques", "page": 1094},
+        {"title": "Estats Units", "page": 1097},
+        {"title": "Quina política?", "page": 1106, "kind": "reception"}
+      ],
+      "status": "indexed",
+      "catalogIds": [],
+      "missing": ["context", "musical-language", "people", "works", "concepts", "sources", "guided-listening", "recordings", "editorial-review", "publication"]
+    },
+    {
+      "id": "chapter-36-postwar-countercurrents",
+      "parentId": "part-twentieth-century-and-after",
+      "order": 6,
+      "level": "chapter",
+      "title": "Contracorrents després de la guerra",
+      "pages": "1109–1130",
+      "topics": [
+        {"title": "Guerra Freda i divisió de la tradició", "page": 1110, "kind": "context"},
+        {"title": "Del bebop al free jazz", "page": 1113},
+        {"title": "Música popular", "page": 1116},
+        {"title": "Cronologia", "page": 1120, "kind": "chronology"},
+        {"title": "Broadway i música cinematogràfica", "page": 1124}
+      ],
+      "status": "indexed",
+      "catalogIds": [],
+      "missing": ["context", "musical-language", "people", "works", "concepts", "sources", "guided-listening", "recordings", "editorial-review", "publication"]
+    },
+    {
+      "id": "chapter-37-postwar-classical-heirs",
+      "parentId": "part-twentieth-century-and-after",
+      "order": 7,
+      "level": "chapter",
+      "title": "Hereus de la tradició clàssica durant la postguerra",
+      "pages": "1131–1172",
+      "topics": [
+        {"title": "Diversitat i temes comuns", "page": 1131},
+        {"title": "Cronologia", "page": 1133, "kind": "chronology"},
+        {"title": "Extensió de les tradicions", "page": 1136},
+        {"title": "John Cage i l'avantguarda", "page": 1151},
+        {"title": "Nous sons i textures", "page": 1159, "kind": "innovation"},
+        {"title": "Mescles estilístiques i tradicions", "page": 1167},
+        {"title": "Nous camins", "page": 1170, "kind": "reception"}
+      ],
+      "status": "indexed",
+      "catalogIds": [],
+      "missing": ["context", "musical-language", "people", "works", "concepts", "sources", "guided-listening", "recordings", "editorial-review", "publication"]
+    },
+    {
+      "id": "chapter-38-late-twentieth",
+      "parentId": "part-twentieth-century-and-after",
+      "order": 8,
+      "level": "chapter",
+      "title": "Les darreres dècades del segle XX",
+      "pages": "1173–1210",
+      "topics": [
+        {"title": "Cultura global", "page": 1174, "kind": "context"},
+        {"title": "Cronologia", "page": 1176, "kind": "chronology"},
+        {"title": "Un món musical en transformació", "page": 1177},
+        {"title": "Kronos Quartet i la història de la interpretació", "page": 1180, "kind": "interpretation"},
+        {"title": "Tecnologia digital als anys vuitanta", "page": 1181, "kind": "innovation"},
+        {"title": "Nínxols populars", "page": 1188},
+        {"title": "Minimalisme i postminimalisme", "page": 1190},
+        {"title": "Modernisme i individualisme", "page": 1197},
+        {"title": "Poliestilisme", "page": 1201},
+        {"title": "Nova accessibilitat", "page": 1204},
+        {"title": "Trobar un públic", "page": 1210, "kind": "reception"}
+      ],
+      "status": "indexed",
+      "catalogIds": [],
+      "missing": ["context", "musical-language", "people", "works", "concepts", "sources", "guided-listening", "recordings", "editorial-review", "publication"]
+    },
+    {
+      "id": "chapter-39-twenty-first-century",
+      "parentId": "part-twentieth-century-and-after",
+      "order": 9,
+      "level": "chapter",
+      "title": "El segle XXI",
+      "pages": "1211–1229",
+      "topics": [
+        {"title": "El nou mil·lenni", "page": 1211, "kind": "context"},
+        {"title": "Cronologia", "page": 1212, "kind": "chronology"},
+        {"title": "Un nou món musical", "page": 1214},
+        {"title": "El futur de la música occidental", "page": 1229, "kind": "reception"}
+      ],
+      "status": "indexed",
+      "catalogIds": [],
+      "missing": ["context", "musical-language", "people", "works", "concepts", "sources", "guided-listening", "recordings", "editorial-review", "publication"]
+    }
+  ]
+}
