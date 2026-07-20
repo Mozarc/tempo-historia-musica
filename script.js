@@ -114,6 +114,189 @@ const eras = [
   }
 ];
 
+const chronologyMoments = [
+  { name: "Prehistòria sonora", dates: "abans de 3000 aC", era: "prehistoria" },
+  { name: "Primeres cultures urbanes", dates: "c. 3000–800 aC", era: "cultures-urbanes" },
+  { name: "Grècia i Roma", dates: "c. 800 aC–500 dC", era: "grecia-roma" },
+  { name: "Alta edat mitjana", dates: "c. 500–1000", era: "cant-liturgic" },
+  { name: "Polifonia medieval", dates: "c. 1000–1400", era: "polifonia-medieval" },
+  { name: "Renaixement", dates: "c. 1400–1600", era: "humanisme-impremta" },
+  { name: "Primer Barroc", dates: "c. 1600–1680", era: "monodia-opera" },
+  { name: "Barroc tardà", dates: "c. 1680–1750", era: "tonalitat-fuga" },
+  { name: "Classicisme", dates: "c. 1750–1810", era: "claror-galant" },
+  { name: "Revolució i Beethoven", dates: "c. 1790–1830", era: "beethoven-frontissa" },
+  { name: "Primer Romanticisme", dates: "c. 1810–1850", era: "interior-romantic" },
+  { name: "Romanticisme ple", dates: "c. 1850–1890", era: "imaginacio-orquestral" },
+  { name: "Fi de segle", dates: "c. 1870–1914", era: "identitat-desmesura" },
+  { name: "Modernismes i avantguardes", dates: "c. 1900–1945", era: "tonalitat-en-suspens" },
+  { name: "Postguerra experimental", dates: "c. 1945–1975", era: "laboratori-postguerra" },
+  { name: "Pluralitat contemporània", dates: "c. 1975–2000", era: "repetir-transformar" },
+  { name: "Segle XXI", dates: "2000–avui", era: "present-plural" }
+];
+
+const originNavItems = [
+  { id: "prehistoria", name: "Prehistòria" },
+  { id: "cultures-urbanes", name: "Cultures antigues" },
+  { id: "grecia-roma", name: "Grècia i Roma" }
+];
+
+const medievalNavItems = [
+  { id: "cant-liturgic", name: "Cant litúrgic" },
+  { id: "monodia-medieval", name: "Cançó medieval" },
+  { id: "polifonia-medieval", name: "Polifonia" }
+];
+
+const renaissanceNavItems = [
+  { id: "humanisme-impremta", name: "Humanisme i impremta" },
+  { id: "polifonia-renaixentista", name: "Polifonia renaixentista" },
+  { id: "madrigal-instruments", name: "Madrigal i instruments" }
+];
+
+const baroqueNavItems = [
+  { id: "monodia-opera", name: "Veu i òpera" },
+  { id: "contrast-concertant", name: "Contrast concertant" },
+  { id: "tonalitat-fuga", name: "Tonalitat i fuga" }
+];
+
+const classicalNavItems = [
+  { id: "claror-galant", name: "Claror galant" },
+  { id: "sonata-conversa", name: "Sonata i conversa" },
+  { id: "beethoven-frontissa", name: "Beethoven, frontissa" }
+];
+
+const romanticNavItems = [
+  { id: "interior-romantic", name: "Intimitat romàntica" },
+  { id: "imaginacio-orquestral", name: "Imaginació orquestral" },
+  { id: "identitat-desmesura", name: "Identitat i desmesura" }
+];
+
+const modernNavItems = [
+  { id: "tonalitat-en-suspens", name: "Tonalitat en suspens" },
+  { id: "ritme-soroll-escena", name: "Ritme, soroll i escena" },
+  { id: "laboratori-postguerra", name: "Laboratori de postguerra" }
+];
+
+const contemporaryNavItems = [
+  { id: "repetir-transformar", name: "Repetir és transformar" },
+  { id: "dins-del-so", name: "Dins del so" },
+  { id: "present-plural", name: "Present plural" }
+];
+
+const originListeningNotes = {
+  prehistoria: {
+    name: "Prehistòria sonora",
+    title: "No conservem cap interpretació",
+    performers: "L’objecte és autèntic; qualsevol música és una hipòtesi moderna.",
+    guide: "Observa la flauta i separa les possibilitats acústiques de les melodies que no podem conèixer.",
+    color: "#72513f"
+  },
+  "cultures-urbanes": {
+    name: "Primeres cultures urbanes",
+    title: "Afinacions sense enregistraments",
+    performers: "Les tauletes descriuen relacions entre cordes, no una interpretació completa.",
+    guide: "Llegeix les fonts com a evidències parcials: instrument, text, imatge i context social.",
+    color: "#8a5b24"
+  },
+  "grecia-roma": {
+    name: "Grècia i Roma",
+    title: "Epitafi de Seikilos · reconstrucció",
+    performers: "L’escolta documentada és dins el capítol.",
+    guide: "Diferencia la melodia antiga de les decisions modernes de veu, tempo i pronunciació.",
+    color: "#3f5c68"
+  },
+  "tradicio-maqam": {
+    name: "Mons de maqam",
+    title: "Tres famílies, cap escala universal",
+    performers: "Àrab · persa · otomana",
+    guide: "Escolta el mode com un recorregut après: centre, frase, tensió, modulació i retorn.",
+    color: "#855336"
+  },
+  "tradicio-raga": {
+    name: "Mons del rāga",
+    title: "Identitat melòdica, temps cíclic",
+    performers: "Hindustànica · carnàtica",
+    guide: "Escolta el bordó, el rostre de cada nota i el retorn del tāla: improvisar és recordar en present.",
+    color: "#495b70"
+  },
+  "tradicio-est-asia": {
+    name: "Àsia oriental i sud-est asiàtic",
+    title: "Intimitat, ritual, escena i cicle",
+    performers: "Guqin · gagaku i Jongmyo · Kunqu i pansori · gamelan",
+    guide: "Canvia de lent a cada sala: escolta el tacte, la coordinació ritual, la veu que encarna personatges i el gong que organitza el temps.",
+    color: "#4e685f"
+  },
+  "tradicio-africa": {
+    name: "Àfrica occidental, central i austral",
+    title: "Memòria, polifonia, relació i cicle",
+    performers: "Jali mandinga · Aka · Ewe i Yoruba · Mbira/Sansi",
+    guide: "No busquis un ritme africà únic: escolta qui recorda, com s’entrellacen les veus, què coordina els cossos i què transforma cada retorn.",
+    color: "#8a4d39"
+  },
+  "tradicio-ameriques": {
+    name: "Amèriques indígenes",
+    title: "Objecte, territori, cicle i sobirania",
+    performers: "Món maia · Voladores · Yampara · Powwow",
+    guide: "Canvia de pregunta a cada sala: què pot provar un objecte, com el moviment completa el so, com l’any organitza la pràctica i qui té autoritat sobre un enregistrament.",
+    color: "#74485b"
+  },
+  "tradicio-oceania": {
+    name: "Oceania i diàspores del Pacífic",
+    title: "Territori, veu, gest i circulació",
+    performers: "Manikay yolŋu · Taonga pūoro · Mele i hula · Pacific reggae",
+    guide: "Escolta l’oceà com una xarxa: el cant activa territori, l’objecte recupera veu, el cos completa el poema i la migració transforma formes sense esborrar memòria.",
+    color: "#315f68"
+  },
+  "tradicio-arrels-afroamericanes": {
+    name: "Arrels afroamericanes",
+    title: "Veu, comunitat, disc i improvisació",
+    performers: "Espirituals · blues · gospel · primers mons del jazz",
+    guide: "Escolta les genealogies sense convertir-les en una línia recta: la resposta del grup, el timbre individual, la migració i el suport enregistrat transformen cada pràctica.",
+    color: "#805236"
+  },
+  "tradicio-canço-rock-pop": {
+    name: "Cançó, folk, country, rock i pop",
+    title: "Partitura, disc, amplificació i imatge",
+    performers: "Tin Pan Alley · Carter Family · Chuck Berry · Beatles · Michael Jackson",
+    guide: "Escolta què transforma cada suport: la versió fixada pel disc, la proximitat del micròfon, el riff amplificat, l’estudi que construeix impossibles i la cançó que també es mira.",
+    color: "#385b55"
+  },
+  "tradicio-carib-llatines": {
+    name: "Carib i Amèriques Llatines",
+    title: "Port, dansa, diàspora i estudi",
+    performers: "Tango · son · samba · reggae i dub · salsa · reggaeton",
+    guide: "Escolta cada port com una relació concreta: el pols que organitza el cos, les capes que dialoguen sense duplicar-se, la migració que reordena memòries i l’estudi que converteix la versió en obra.",
+    color: "#754957"
+  },
+  "tradicio-electronica-club": {
+    name: "Electrònica i cultures de club",
+    title: "Bucle, mescla, màquina i pista",
+    performers: "Musique concrète · disco · house · techno · acid · rave",
+    guide: "Escolta la tecnologia com una relació humana: què revela el bucle, com el DJ administra energia, quina comunitat sosté la pista i com una màquina canvia de llenguatge quan s’utilitza contra la seva funció prevista.",
+    color: "#3f5669"
+  },
+  "tradicio-hiphop-urbanes": {
+    name: "Hip-hop i músiques urbanes",
+    title: "Break, veu, sampler i plataforma",
+    performers: "DJ · MC · breaking · rap · trap · grime",
+    guide: "Escolta una ecologia, no un heroi únic: com el break organitza el cos, com la veu ocupa ciutat i indústria, com el sampler rellegeix l’arxiu i com cada escena tradueix un llenguatge global.",
+    color: "#75502d"
+  },
+  "tradicio-concert-pantalla-xarxa": {
+    name: "Concert, pantalla, joc i xarxa",
+    title: "Marc, muntatge, lloc i interacció",
+    performers: "Experiment · cinema · art sonor · videojoc · ambient · xarxa",
+    guide: "Pregunta qui decideix la forma: una partitura que emmarca l’ambient, un muntatge audiovisual, el cos dins un lloc, l’acció del jugador o un sistema compartit entre codi i usuari.",
+    color: "#564b65"
+  },
+  "zodiac-musical": {
+    name: "Zodíac musical",
+    title: "Cicle d’autoria · dotze signes, vint-i-quatre variacions",
+    performers: "Concepció i direcció musical pròpies · realització sonora assistida amb Suno",
+    guide: "Escolta cada parella com dues respostes a una mateixa idea: identifica què preserva l’essència del signe i què canvia amb cada nova realització.",
+    color: "#8f6f91"
+  }
+};
+
 const eraProfiles = {
   "edat-mitjana": {
     society: "Monestirs, catedrals i corts són els grans centres musicals. La notació neumàtica i, més endavant, el pentagrama permeten conservar repertoris que abans depenien sobretot de la memòria.",
@@ -301,6 +484,7 @@ const eraSoundtracks = {
 
 const timeline = document.querySelector("#timeline");
 const eraNav = document.querySelector("#era-nav");
+const chronologyScale = document.querySelector("#chronology-scale");
 const search = document.querySelector("#search");
 const noResults = document.querySelector("#no-results");
 const clearSearch = document.querySelector("#clear-search");
@@ -347,8 +531,6 @@ const mergeHistoryCatalogs = catalogs => Object.fromEntries([
 ]);
 
 async function renderHistoryAtlas() {
-  if (!atlasParts) return;
-
   try {
     const [coverageResponse, manifestResponse] = await Promise.all([
       fetch("data/coverage.json"),
@@ -369,6 +551,7 @@ async function renderHistoryAtlas() {
       await Promise.all(catalogResponses.map(response => response.json()))
     );
     historyCatalog = catalog;
+    if (!atlasParts) return;
     const parts = coverage.entries.filter(entry => entry.level === "part");
     const developedChapterIds = new Set(catalog.chapters.map(chapter => chapter.id));
 
@@ -411,10 +594,35 @@ async function renderHistoryAtlas() {
 }
 
 function renderNav() {
-  eraNav.innerHTML = eras.map((era, index) => `
+  const items = [
+    ...originNavItems,
+    ...medievalNavItems,
+    ...renaissanceNavItems,
+    ...baroqueNavItems,
+    ...classicalNavItems,
+    ...romanticNavItems,
+    ...modernNavItems,
+    ...contemporaryNavItems,
+    ...eras.filter(era => !["edat-mitjana", "renaixement", "barroc", "classicisme", "romanticisme", "segle-xx", "contemporania"].includes(era.id))
+  ];
+  eraNav.innerHTML = items.map((era, index) => `
     <a class="era-link${index === 0 ? " active" : ""}" href="#${era.id}" data-era="${era.id}">
       ${String(index + 1).padStart(2, "0")} ${era.name}
     </a>
+  `).join("");
+}
+
+function renderChronologyScale() {
+  chronologyScale.innerHTML = chronologyMoments.map((moment, index) => `
+    <li class="chronology-moment${moment.state === "future" ? " is-future" : ""}" data-era="${moment.era}">
+      ${moment.era ? `<a href="#${moment.era}">` : `<span class="chronology-placeholder">`}
+        <span class="chronology-index">${String(index + 1).padStart(2, "0")}</span>
+        <span class="chronology-dot" aria-hidden="true"></span>
+        <strong>${moment.name}</strong>
+        <small>${moment.dates}</small>
+        ${moment.state === "future" ? `<em>Fase de recerca</em>` : ""}
+      ${moment.era ? `</a>` : `</span>`}
+    </li>
   `).join("");
 }
 
@@ -432,8 +640,11 @@ function composerCard(composer, eraId) {
 function renderTimeline(query = "") {
   const term = normalize(query.trim());
   let matches = 0;
+  const overviewEras = eras.filter(era => !["edat-mitjana", "renaixement", "barroc", "classicisme", "romanticisme", "segle-xx", "contemporania"].includes(era.id));
+  const visibleEras = term ? eras : overviewEras;
+  timeline.hidden = visibleEras.length === 0;
 
-  timeline.innerHTML = eras.map((era, index) => {
+  timeline.innerHTML = visibleEras.map((era, index) => {
     const eraText = normalize([era.name, era.description, era.headline, ...era.styles].join(" "));
     const composers = era.composers.filter(composer => {
       if (!term) return true;
@@ -468,7 +679,7 @@ function renderTimeline(query = "") {
     `;
   }).join("");
 
-  noResults.hidden = matches > 0;
+  noResults.hidden = !term || matches > 0;
   setupSectionObserver();
 }
 
@@ -732,17 +943,51 @@ function updateSoundtrackButton() {
 function setSoundtrack(eraId) {
   const selection = eraSoundtracks[eraId];
   const era = eras.find(item => item.id === eraId);
-  if (!selection || !era || currentSoundtrackEra === eraId) return;
+  const origin = originListeningNotes[eraId];
+  if (currentSoundtrackEra === eraId) return;
+
+  if (origin) {
+    currentSoundtrackEra = eraId;
+    soundtrack.dataset.era = eraId;
+    soundtrack.style.setProperty("--soundtrack-color", origin.color);
+    soundtrack.classList.add("is-evidence-mode");
+    soundtrackEra.textContent = origin.name;
+    soundtrackTitle.textContent = origin.title;
+    soundtrackPerformers.textContent = origin.performers;
+    soundtrackGuide.textContent = origin.guide;
+    soundtrackOpen.hidden = true;
+    soundtrackActivate.hidden = true;
+    soundtrackToggle.hidden = true;
+    soundtrackEmbedShell.hidden = true;
+    soundtrack.classList.remove("is-active");
+    if (spotifyController && soundtrackPlaying) spotifyController.pause();
+    soundtrackPlaying = false;
+    announceSoundtrack(origin.title);
+    return;
+  }
+
+  if (!selection || !era) return;
 
   currentSoundtrackEra = eraId;
   soundtrack.dataset.era = eraId;
   soundtrack.style.setProperty("--soundtrack-color", era.color);
+  soundtrack.classList.remove("is-evidence-mode");
   soundtrackEra.textContent = era.name;
   soundtrackTitle.textContent = selection.title;
   soundtrackPerformers.textContent = selection.performers;
   soundtrackGuide.textContent = selection.guide;
   soundtrackOpen.href = spotifyItemUrl(selection.uri);
+  soundtrackOpen.hidden = false;
   soundtrackOpen.setAttribute("aria-label", `Obre ${selection.title} a Spotify`);
+
+  if (soundtrackEnabled) {
+    soundtrack.classList.add("is-active");
+    soundtrackEmbedShell.hidden = false;
+    soundtrackToggle.hidden = false;
+    updateSoundtrackButton();
+  } else {
+    soundtrackActivate.hidden = false;
+  }
 
   if (spotifyController && soundtrackEnabled) {
     spotifyController.loadUri(selection.uri);
@@ -823,15 +1068,18 @@ function toggleSoundtrack() {
 let sectionObserver;
 function setupSectionObserver() {
   if (sectionObserver) sectionObserver.disconnect();
-  const sections = document.querySelectorAll(".era");
+  const sections = document.querySelectorAll(".world-atlas, .current-atlas, .maqam-header, .india-header, .east-asia-header, .africa-header, .americas-header, .oceania-header, .current-roots-header, .song-rock-header, .latin-header, .electronic-header, .hiphop-header, .expanded-header, .zodiac-header, .zodiac-card, .origin-chapter, .medieval-chapter, .era:not(#edat-mitjana):not(#renaixement):not(#barroc):not(#classicisme):not(#romanticisme):not(#segle-xx):not(#contemporania)");
   sectionObserver = new IntersectionObserver(entries => {
     const visible = entries
       .filter(entry => entry.isIntersecting)
       .sort((a, b) => b.intersectionRatio - a.intersectionRatio)[0];
     if (!visible) return;
-    setSoundtrack(visible.target.id);
+    setSoundtrack(visible.target.dataset.soundEra || visible.target.id);
     document.querySelectorAll(".era-link").forEach(link => {
       link.classList.toggle("active", link.dataset.era === visible.target.id);
+    });
+    document.querySelectorAll(".chronology-moment").forEach(moment => {
+      moment.classList.toggle("active", moment.dataset.era === visible.target.id);
     });
   }, { rootMargin: "-20% 0px -60%", threshold: [0, .1, .3] });
   sections.forEach(section => sectionObserver.observe(section));
@@ -856,6 +1104,34 @@ atlasParts?.addEventListener("click", event => {
   const chapterButton = event.target.closest("[data-history-chapter]");
   if (chapterButton) openHistoryChapter(chapterButton.dataset.historyChapter);
 });
+document.querySelector(".medieval-wing")?.addEventListener("click", event => {
+  const chapterButton = event.target.closest("[data-history-chapter]");
+  if (chapterButton) openHistoryChapter(chapterButton.dataset.historyChapter);
+});
+document.querySelector(".renaissance-wing")?.addEventListener("click", event => {
+  const eraButton = event.target.closest("[data-focus-era]");
+  if (eraButton) openEraProfile(eraButton.dataset.focusEra);
+});
+document.querySelector(".baroque-wing")?.addEventListener("click", event => {
+  const eraButton = event.target.closest("[data-focus-era]");
+  if (eraButton) openEraProfile(eraButton.dataset.focusEra);
+});
+document.querySelector(".classical-wing")?.addEventListener("click", event => {
+  const eraButton = event.target.closest("[data-focus-era]");
+  if (eraButton) openEraProfile(eraButton.dataset.focusEra);
+});
+document.querySelector(".romantic-wing")?.addEventListener("click", event => {
+  const eraButton = event.target.closest("[data-focus-era]");
+  if (eraButton) openEraProfile(eraButton.dataset.focusEra);
+});
+document.querySelector(".modern-wing")?.addEventListener("click", event => {
+  const eraButton = event.target.closest("[data-focus-era]");
+  if (eraButton) openEraProfile(eraButton.dataset.focusEra);
+});
+document.querySelector(".contemporary-wing")?.addEventListener("click", event => {
+  const eraButton = event.target.closest("[data-focus-era]");
+  if (eraButton) openEraProfile(eraButton.dataset.focusEra);
+});
 
 dialogClose.addEventListener("click", closeDialog);
 detailDialog.addEventListener("click", event => {
@@ -866,5 +1142,6 @@ soundtrackActivate.addEventListener("click", activateSoundtrack);
 soundtrackToggle.addEventListener("click", toggleSoundtrack);
 
 renderNav();
+renderChronologyScale();
 renderTimeline();
 renderHistoryAtlas();
